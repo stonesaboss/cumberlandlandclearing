@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "upper-cumberland-land-clearing",
+  "compatibility_date": "2026-07-01",
+  "pages_build_output_dir": "dist"
+
+  // ── Optional bindings ─────────────────────────────────────────────
+  // The lead endpoint works without these (webhook/email delivery only).
+  // To enable, create the resources in Cloudflare, paste the real IDs,
+  // and uncomment. Do NOT invent IDs.
+  //
+  // D1 lead storage (see migrations/0001_create_leads.sql):
+  // "d1_databases": [
+  //   {
+  //     "binding": "LEADS_DB",
+  //     "database_name": "<D1_DATABASE_NAME>",
+  //     "database_id": "<D1_DATABASE_ID>"
+  //   }
+  // ],
+  //
+  // Private R2 bucket for visitor photo uploads (keep the bucket private):
+  // "r2_buckets": [
+  //   {
+  //     "binding": "LEAD_UPLOADS",
+  //     "bucket_name": "<R2_BUCKET_NAME>"
+  //   }
+  // ]
+}

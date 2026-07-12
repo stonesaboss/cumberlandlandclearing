@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { SITE, PROCESS_DISCLOSURE } from '../config';
+import { breadcrumbSchema } from '../lib/schema';
+
+const title = 'Request a Land-Clearing Project Review | Upper Cumberland TN';
+const description =
+  'Submit your property details — location, acreage, vegetation, terrain and intended use — to request a land-clearing or forestry-mulching project review in Upper Cumberland, TN.';
+
+const siteUrl = (Astro.site?.href ?? '').replace(/\/$/, '');
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Request an Estimate', href: '/request-estimate/' },
+];
+---
+
+<BaseLayout title={title} description={description} schema={[breadcrumbSchema(siteUrl, crumbs)]}>
+  <Breadcrumbs crumbs={crumbs} />
+
+  <section class="section">
+    <div class="container req-grid">
+      <div class="req-copy">
+        <h1>Request a Project Review</h1>
+        <p class="lead-para">
+          The more complete the picture of the property, the faster and more accurately a
+          contractor can evaluate the project. Location, acreage, vegetation, terrain, access and
+          intended use are the essentials — photos make everything easier.
+        </p>
+        <h2>What Happens After You Submit</h2>
+        <ol>
+          <li>The project details are reviewed for completeness and location.</li>
+          <li>If a local contractor's equipment and coverage fit, the request may be routed to them.</li>
+          <li>The contractor follows up to discuss access, scope, scheduling and pricing.</li>
+        </ol>
+        <p class="disclosure-note">{PROCESS_DISCLOSURE}</p>
+        <p>
+          Prefer to talk instead?
+          <a href={`tel:${SITE.phoneTel}`} data-track="phone_click" data-track-label="request_page">Call {SITE.phoneDisplay}</a>.
+        </p>
+      </div>
+      <div>
+        <LeadForm idPrefix="req" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .req-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: start; }
+  .lead-para { font-size: 1.08rem; }
+  .req-copy h2 { margin-top: 1.5rem; }
+  @media (max-width: 900px) {
+    .req-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+</style>

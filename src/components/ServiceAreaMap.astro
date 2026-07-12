@@ -1,0 +1,45 @@
+---
+// Stylized (not to-scale) regional map of the Upper Cumberland service area.
+// Decorative illustration — the text list alongside it carries the information.
+---
+
+<svg viewBox="0 0 520 400" role="img" aria-label="Stylized map of the Upper Cumberland region showing Cookeville, Crossville, Sparta, Livingston, Smithville, Baxter, Monterey and Algood" class="area-map">
+  <rect width="520" height="400" rx="12" fill="#EDE6D6" />
+  <!-- county-ish blobs -->
+  <path d="M60 90 Q140 40 230 70 L260 140 Q200 190 120 170 Q70 150 60 90Z" fill="#CBD8B4" stroke="#9DB07E" stroke-width="2"/>
+  <path d="M230 70 Q330 30 420 80 L440 170 Q360 200 280 170 L260 140Z" fill="#D5DEC0" stroke="#9DB07E" stroke-width="2"/>
+  <path d="M120 170 Q200 190 260 140 L280 170 Q290 250 230 290 Q150 300 100 250 Q90 200 120 170Z" fill="#C2D2A8" stroke="#9DB07E" stroke-width="2"/>
+  <path d="M280 170 Q360 200 440 170 L460 260 Q380 320 300 290 Q280 240 280 170Z" fill="#CBD8B4" stroke="#9DB07E" stroke-width="2"/>
+  <path d="M100 250 Q150 300 230 290 Q240 340 200 370 Q120 370 80 320 Q80 280 100 250Z" fill="#D5DEC0" stroke="#9DB07E" stroke-width="2"/>
+  <!-- roads -->
+  <path d="M40 220 Q180 200 300 210 T500 190" fill="none" stroke="#B8AE97" stroke-width="5" stroke-linecap="round"/>
+  <path d="M210 40 Q220 170 190 360" fill="none" stroke="#B8AE97" stroke-width="4" stroke-linecap="round"/>
+  <!-- markers -->
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#173F22">
+    <circle cx="215" cy="185" r="9" fill="#E86F0C" stroke="#fff" stroke-width="2.5"/>
+    <text x="230" y="180">Cookeville</text>
+    <circle cx="390" cy="235" r="8" fill="#E86F0C" stroke="#fff" stroke-width="2.5"/>
+    <text x="352" y="262">Crossville</text>
+    <circle cx="185" cy="285" r="7" fill="#173F22" stroke="#fff" stroke-width="2"/>
+    <text x="198" y="292" font-weight="600">Sparta</text>
+    <circle cx="255" cy="85" r="7" fill="#173F22" stroke="#fff" stroke-width="2"/>
+    <text x="268" y="80" font-weight="600">Livingston</text>
+    <circle cx="95" cy="290" r="7" fill="#173F22" stroke="#fff" stroke-width="2"/>
+    <text x="45" y="318" font-weight="600">Smithville</text>
+    <circle cx="150" cy="200" r="5" fill="#556B2F" stroke="#fff" stroke-width="2"/>
+    <text x="92" y="196" font-size="12" font-weight="600">Baxter</text>
+    <circle cx="310" cy="160" r="5" fill="#556B2F" stroke="#fff" stroke-width="2"/>
+    <text x="322" y="156" font-size="12" font-weight="600">Monterey</text>
+    <circle cx="240" cy="150" r="5" fill="#556B2F" stroke="#fff" stroke-width="2"/>
+    <text x="250" y="142" font-size="12" font-weight="600">Algood</text>
+  </g>
+</svg>
+
+<style>
+  .area-map {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+  }
+</style>

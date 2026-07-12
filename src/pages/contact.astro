@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE } from '../config';
+import { breadcrumbSchema } from '../lib/schema';
+
+const title = 'Contact | Upper Cumberland Land Clearing';
+const description =
+  'Contact Upper Cumberland Land Clearing about a land-clearing or forestry-mulching project request, or submit property details for review.';
+
+const siteUrl = (Astro.site?.href ?? '').replace(/\/$/, '');
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Contact', href: '/contact/' },
+];
+---
+
+<BaseLayout title={title} description={description} schema={[breadcrumbSchema(siteUrl, crumbs)]}>
+  <Breadcrumbs crumbs={crumbs} />
+  <section class="section">
+    <div class="container contact-wrap">
+      <h1>Contact</h1>
+      <p class="lead-para">
+        The fastest way to move a project forward is the
+        <a href="/request-estimate/">project-review form</a> — it collects everything a contractor
+        needs to evaluate the property, including photos.
+      </p>
+      <div class="contact-cards">
+        <div class="card contact-card">
+          <h2>Phone</h2>
+          <p><a href={`tel:${SITE.phoneTel}`} data-track="phone_click" data-track-label="contact_page">{SITE.phoneDisplay}</a></p>
+          <p class="muted">For questions about a request you already submitted, have your reference number handy.</p>
+        </div>
+        <div class="card contact-card">
+          <h2>Email</h2>
+          <p><a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+          <p class="muted">General questions, corrections and website matters.</p>
+        </div>
+        <div class="card contact-card">
+          <h2>Project Requests</h2>
+          <p><a href="/request-estimate/">Request a Project Review →</a></p>
+          <p class="muted">Location, acreage, vegetation, terrain, access, intended use and photos.</p>
+        </div>
+      </div>
+      <p class="disclosure-note">
+        Upper Cumberland Land Clearing is an independent project-request and referral service.
+        There is no walk-in office location. See the
+        <a href="/referral-disclosure/">referral disclosure</a> for how requests are handled.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-wrap { max-width: 900px; }
+  .lead-para { font-size: 1.08rem; }
+  .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-block: 1.75rem; }
+  .contact-card { padding: 1.3rem 1.4rem; }
+  .contact-card h2 { font-size: 1.05rem; }
+  .contact-card a { font-weight: 600; }
+  .muted { color: var(--text-muted); font-size: 0.88rem; margin: 0.4rem 0 0; }
+</style>

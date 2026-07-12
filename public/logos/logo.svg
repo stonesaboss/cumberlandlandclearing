@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Upper Cumberland Land Clearing logo">
+  <!-- PLACEHOLDER LOGO — replace this file with the finalized supplied logo
+       (export the approved PNG as public/logos/logo.png and update logoPath
+       in src/config.ts). Do not ship this placeholder to production. -->
+  <path d="M200 8 372 72v150L200 392 28 222V72Z" fill="#F5F1E7" stroke="#173F22" stroke-width="10"/>
+  <path d="M200 24 356 82v134L200 372 44 216V82Z" fill="none" stroke="#173F22" stroke-width="3"/>
+  <!-- tree line -->
+  <g fill="#2F4A26">
+    <path d="M76 150 96 108l20 42h-12l14 26H74l14-26Z"/>
+    <path d="M304 150l20-42 20 42h-12l14 26h-44l14-26Z"/>
+  </g>
+  <!-- simplified mulcher silhouette -->
+  <g>
+    <rect x="150" y="96" width="110" height="64" rx="8" fill="#171A17"/>
+    <rect x="216" y="104" width="36" height="30" rx="4" fill="#E8A20C"/>
+    <rect x="118" y="128" width="52" height="36" rx="6" fill="#171A17"/>
+    <g fill="#171A17">
+      <rect x="140" y="162" width="130" height="22" rx="11"/>
+      <circle cx="152" cy="173" r="7" fill="#F5F1E7"/>
+      <circle cx="200" cy="173" r="7" fill="#F5F1E7"/>
+      <circle cx="252" cy="173" r="7" fill="#F5F1E7"/>
+    </g>
+  </g>
+  <!-- brand band -->
+  <rect x="52" y="206" width="296" height="44" fill="#173F22"/>
+  <text x="200" y="237" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-size="30" font-weight="bold" fill="#FFFFFF" letter-spacing="1">UPPER CUMBERLAND</text>
+  <text x="200" y="298" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-size="42" font-weight="bold" fill="#171A17" letter-spacing="2">LAND CLEARING</text>
+  <!-- accent -->
+  <path d="M120 318h60l-8 8h-52Z" fill="#E86F0C"/>
+  <path d="M280 318h-60l8 8h52Z" fill="#E86F0C"/>
+  <g fill="#2F4A26">
+    <path d="M200 306l14 26h-28Z"/>
+    <path d="M182 316l10 20h-20Z"/>
+    <path d="M218 316l10 20h-20Z"/>
+  </g>
+</svg>

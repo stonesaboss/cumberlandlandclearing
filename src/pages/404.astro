@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../config';
+
+const title = 'Page Not Found | Upper Cumberland Land Clearing';
+const description = 'The page you were looking for could not be found.';
+---
+
+<BaseLayout title={title} description={description} noindex={true}>
+  <section class="section">
+    <div class="container nf-wrap">
+      <img src={SITE.logoPath} alt={`${SITE.name} logo`} width="120" height="120" />
+      <h1>Page Not Found</h1>
+      <p class="lead-para">
+        That page doesn't exist or has moved. Here's where to go instead:
+      </p>
+      <ul class="nf-links">
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/land-clearing-cookeville-tn/">Land-Clearing Services</a></li>
+        <li><a href="/forestry-mulching-cookeville-tn/">Forestry Mulching</a></li>
+        <li><a href="/service-area/">Service Areas</a></li>
+      </ul>
+      <div class="nf-actions">
+        <a class="btn btn-orange btn-lg" href="/request-estimate/" data-track="request_estimate_click" data-track-label="404">Request a Project Review</a>
+        <a class="btn btn-outline-dark btn-lg" href={`tel:${SITE.phoneTel}`} data-track="phone_click" data-track-label="404">Call {SITE.phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .nf-wrap { max-width: 640px; text-align: center; }
+  .nf-wrap img { margin-inline: auto; margin-bottom: 1rem; }
+  .lead-para { font-size: 1.08rem; }
+  .nf-links { list-style: none; padding: 0; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-weight: 600; }
+  .nf-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.75rem; }
+</style>

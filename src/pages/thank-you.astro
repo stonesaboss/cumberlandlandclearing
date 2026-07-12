@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../config';
+
+const title = 'Request Received | Upper Cumberland Land Clearing';
+const description = 'Your land-clearing project request was received.';
+---
+
+<BaseLayout title={title} description={description} noindex={true}>
+  <section class="section">
+    <div class="container ty-wrap">
+      <h1>Your Project Request Was Received</h1>
+      <p class="ty-ref" hidden>Reference number: <strong></strong></p>
+      <p class="lead-para">
+        Thanks for the details. The request will be reviewed, and if a local contractor's
+        equipment, availability and coverage fit the project, you will be contacted to discuss
+        access, scope, scheduling and pricing.
+      </p>
+      <h2>While You Wait</h2>
+      <ul>
+        <li>Gather any extra photos of the property — especially the entrance and the densest vegetation.</li>
+        <li>Think about material handling: mulch in place, pile, haul or burn where permitted.</li>
+        <li>Mark any trees you want to keep and any boundaries that matter.</li>
+      </ul>
+      <p>
+        Questions in the meantime? Call
+        <a href={`tel:${SITE.phoneTel}`} data-track="phone_click" data-track-label="thank_you">{SITE.phoneDisplay}</a>
+        or read more about <a href="/about-this-service/">how this service works</a>.
+      </p>
+      <p><a class="btn btn-outline-dark" href="/">Back to the homepage</a></p>
+    </div>
+  </section>
+
+  <script>
+    // Surface the non-identifying lead reference from the query string.
+    const ref = new URLSearchParams(location.search).get('ref');
+    const p = document.querySelector<HTMLElement>('.ty-ref');
+    if (ref && p && /^[A-Za-z0-9-]{4,40}$/.test(ref)) {
+      p.querySelector('strong')!.textContent = ref;
+      p.hidden = false;
+    }
+    // Thank-you page view event (form_complete fires only after server confirmation).
+    const w = window as unknown as { dataLayer?: unknown[] };
+    w.dataLayer = w.dataLayer || [];
+    w.dataLayer.push({ event: 'thank_you_view' });
+  </script>
+</BaseLayout>
+
+<style>
+  .ty-wrap { max-width: 700px; }
+  .lead-para { font-size: 1.08rem; }
+  .ty-ref { font-size: 1.05rem; color: var(--green-deep); }
+  h2 { margin-top: 1.5rem; }
+</style>

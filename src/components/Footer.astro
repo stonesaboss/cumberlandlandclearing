@@ -1,0 +1,108 @@
+---
+import { SITE, REFERRAL_DISCLOSURE } from '../config';
+import { FOOTER_SERVICES, FOOTER_PROJECT_TYPES, FOOTER_AREAS } from '../data/nav';
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src={SITE.logoPath} alt={`${SITE.name} logo`} width="96" height="96" loading="lazy" />
+      <p>
+        An independent project-request service for land clearing, forestry mulching and rural
+        property improvement across the Upper Cumberland region of Tennessee.
+      </p>
+      <p class="footer-contact">
+        <a href={`tel:${SITE.phoneTel}`} data-track="phone_click" data-track-label="footer">{SITE.phoneDisplay}</a><br />
+        <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      </p>
+    </div>
+
+    <nav aria-label="Footer — services">
+      <h2 class="footer-heading">Services</h2>
+      <ul>
+        {FOOTER_SERVICES.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <nav aria-label="Footer — project types">
+      <h2 class="footer-heading">Project Types</h2>
+      <ul>
+        {FOOTER_PROJECT_TYPES.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+      </ul>
+      <h2 class="footer-heading">Service Areas</h2>
+      <ul>
+        {FOOTER_AREAS.map((l) => (
+          <li><a href={l.href}>{l.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <nav aria-label="Footer — company">
+      <h2 class="footer-heading">Get Started</h2>
+      <ul>
+        <li><a href="/request-estimate/">Request a Project Review</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/about-this-service/">About This Service</a></li>
+        <li><a href="/service-area/">Full Service Area</a></li>
+      </ul>
+      <h2 class="footer-heading">Legal</h2>
+      <ul>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms of Use</a></li>
+        <li><a href="/referral-disclosure/">Referral Disclosure</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container footer-disclosure">
+    <p>{REFERRAL_DISCLOSURE}</p>
+    <p class="footer-copy">© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--green-dark);
+    color: #cfd6c5;
+    font-size: 0.92rem;
+    margin-top: 0;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-block: 3rem 1.5rem;
+  }
+  .footer-brand img { width: 96px; height: 96px; margin-bottom: 0.75rem; background: var(--cream); border-radius: 8px; padding: 4px; }
+  .footer-contact a { color: var(--white); font-weight: 600; }
+  .footer-heading {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin: 1.1rem 0 0.5rem;
+  }
+  .footer-heading:first-child { margin-top: 0; }
+  .site-footer ul { list-style: none; margin: 0; padding: 0; }
+  .site-footer li { margin-bottom: 0.35rem; }
+  .site-footer a { color: #cfd6c5; text-decoration: none; }
+  .site-footer a:hover { color: var(--orange); text-decoration: underline; }
+  .footer-disclosure {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-block: 1.25rem 2rem;
+    font-size: 0.8rem;
+    color: #a8b199;
+  }
+  .footer-copy { margin-top: 0.75rem; }
+  @media (max-width: 900px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) {
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>

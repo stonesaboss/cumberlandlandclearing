@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { REFERRAL_DISCLOSURE } from '../config';
+import { breadcrumbSchema } from '../lib/schema';
+
+const title = 'Referral Disclosure | Upper Cumberland Land Clearing';
+const description =
+  'How Upper Cumberland Land Clearing handles project requests: an independent referral service that may share requests with local land-clearing contractors.';
+
+const siteUrl = (Astro.site?.href ?? '').replace(/\/$/, '');
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Referral Disclosure', href: '/referral-disclosure/' },
+];
+---
+
+<BaseLayout title={title} description={description} schema={[breadcrumbSchema(siteUrl, crumbs)]}>
+  <Breadcrumbs crumbs={crumbs} />
+  <section class="section">
+    <div class="container legal-wrap">
+      <h1>Referral Disclosure</h1>
+      <p class="disclosure-note">{REFERRAL_DISCLOSURE}</p>
+
+      <h2>What Happens to a Submitted Request</h2>
+      <p>
+        When you submit a project request through this website, the information you provide —
+        including your contact details, property location, project description and any photographs
+        — may be shared with one or more local contractors for the purpose of evaluating and
+        responding to your request.
+      </p>
+
+      <h2>Independence of Contractors</h2>
+      <p>
+        Contractors who receive requests through this service are independent businesses. They set
+        their own availability, service offerings, qualifications, estimates, pricing, scheduling
+        and terms. This website does not supervise their work and is not a party to any agreement
+        you enter with a contractor.
+      </p>
+
+      <h2>No Guarantee of Service</h2>
+      <p>
+        Submitting a request does not guarantee that a contractor is available, that an estimate
+        will be provided, or that the project will be performed. Coverage varies by location,
+        project size, equipment requirements and contractor capacity.
+      </p>
+
+      <h2>Compensation</h2>
+      <p>
+        This website may receive compensation from contractors in connection with referred project
+        requests. Property owners are not charged to submit a request.
+      </p>
+
+      <h2>Your Choices</h2>
+      <p>
+        To ask how your submitted information was handled, or to request its deletion, use the
+        contact details on the <a href="/contact/">contact page</a>. See also the
+        <a href="/privacy-policy/">privacy policy</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-wrap { max-width: 760px; }
+  h2 { margin-top: 1.75rem; }
+</style>

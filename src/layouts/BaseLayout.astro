@@ -1,0 +1,90 @@
+---
+import '@fontsource-variable/oswald';
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import StickyMobileBar from '../components/StickyMobileBar.astro';
+import { SITE } from '../config';
+import { organizationSchema, websiteSchema } from '../lib/schema';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Extra JSON-LD blocks (breadcrumbs, service, FAQ) */
+  schema?: object[];
+  noindex?: boolean;
+  ogImage?: string;
+}
+
+const { title, description, schema = [], noindex = false, ogImage = '/images/hero-forestry-mulcher.svg' } = Astro.props;
+
+const siteUrl = (Astro.site?.href ?? 'https://uppercumberlandlandclearing.com/').replace(/\/$/, '');
+const canonical = `${siteUrl}${Astro.url.pathname}`;
+const allSchema = [organizationSchema(siteUrl), websiteSchema(siteUrl), ...schema];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+
+    {allSchema.map((s) => (
+      <script type="application/ld+json" set:html={JSON.stringify(s)} />
+    ))}
+
+    {SITE.tagManagerId && (
+      <script
+        is:inline
+        set:html={`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${SITE.tagManagerId}');`}
+      />
+    )}
+    {!SITE.tagManagerId && SITE.analyticsId && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.analyticsId}`}></script>
+        <script
+          is:inline
+          set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${SITE.analyticsId}');`}
+        />
+      </>
+    )}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <StickyMobileBar />
+
+    <script>
+      // Lightweight event tracking: any element with data-track pushes to dataLayer.
+      document.addEventListener('click', (e) => {
+        const el = (e.target as HTMLElement).closest<HTMLElement>('[data-track]');
+        if (!el) return;
+        const w = window as unknown as { dataLayer?: unknown[] };
+        w.dataLayer = w.dataLayer || [];
+        w.dataLayer.push({ event: el.dataset.track, label: el.dataset.trackLabel ?? '' });
+      });
+    </script>
+  </body>
+</html>

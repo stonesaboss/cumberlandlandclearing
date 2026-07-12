@@ -1,0 +1,91 @@
+---
+import type { PageFaq } from '../data/types';
+
+interface Props {
+  faqs: PageFaq[];
+  heading?: string;
+}
+const { faqs, heading } = Astro.props;
+---
+
+<section class="section faq-section" id="faqs">
+  <div class="container faq-container">
+    {heading && (
+      <div class="section-heading">
+        <h2>{heading}</h2>
+      </div>
+    )}
+    <div class="faq-list">
+      {faqs.map((f, i) => (
+        <div class="faq-item">
+          <h3>
+            <button type="button" class="faq-q" aria-expanded="false" aria-controls={`faq-panel-${i}`}>
+              <span>{f.q}</span>
+              <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </h3>
+          <div class="faq-a" id={`faq-panel-${i}`} hidden>
+            <div class="faq-a-inner"><p>{f.a}</p></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-container { max-width: 860px; }
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    margin-bottom: 0.6rem;
+    overflow: hidden;
+  }
+  .faq-item h3 { margin: 0; font-size: 1rem; }
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    font-weight: 600;
+    font-family: var(--font-body);
+    color: var(--charcoal);
+    background: none;
+    border: 0;
+    padding: 0.95rem 1.1rem;
+    cursor: pointer;
+  }
+  .faq-q:hover { background: var(--cream); }
+  .faq-icon { flex-shrink: 0; color: var(--orange); transition: transform 0.2s ease; }
+  .faq-q[aria-expanded='true'] .faq-icon { transform: rotate(45deg); }
+  .faq-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.25s ease; }
+  .faq-a.open { grid-template-rows: 1fr; }
+  .faq-a-inner { overflow: hidden; }
+  .faq-a-inner p { padding: 0 1.1rem 1rem; margin: 0; color: var(--text-muted); }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.faq-q').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const panel = document.getElementById(btn.getAttribute('aria-controls') ?? '');
+      if (!panel) return;
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      if (open) {
+        panel.classList.remove('open');
+        // Wait for the collapse animation before hiding from AT.
+        setTimeout(() => { panel.hidden = true; }, 250);
+      } else {
+        panel.hidden = false;
+        void panel.offsetHeight; // force reflow so the expand transition runs
+        panel.classList.add('open');
+      }
+    });
+  });
+</script>

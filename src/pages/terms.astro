@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { breadcrumbSchema } from '../lib/schema';
+
+const title = 'Terms of Use | Upper Cumberland Land Clearing';
+const description =
+  'Terms of use for the Upper Cumberland Land Clearing website and its project-request and referral service.';
+
+const siteUrl = (Astro.site?.href ?? '').replace(/\/$/, '');
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Terms of Use', href: '/terms/' },
+];
+---
+
+<BaseLayout title={title} description={description} schema={[breadcrumbSchema(siteUrl, crumbs)]}>
+  <Breadcrumbs crumbs={crumbs} />
+  <section class="section">
+    <div class="container legal-wrap">
+      <h1>Terms of Use</h1>
+      <p><em>Last updated: July 2026</em></p>
+
+      <h2>The Service</h2>
+      <p>
+        This website provides an independent project-request and referral service for land-clearing
+        and related work in the Upper Cumberland region of Tennessee. It does not directly perform
+        land-clearing work unless otherwise stated, and it is not a party to agreements between
+        property owners and contractors.
+      </p>
+
+      <h2>No Professional Advice</h2>
+      <p>
+        Content on this website is general information about clearing methods and project planning.
+        It is not engineering, legal, environmental or regulatory advice. Requirements such as
+        permits, drainage and erosion rules vary by location and project — verify them with the
+        relevant local authority and your contractor.
+      </p>
+
+      <h2>Accuracy of Submissions</h2>
+      <p>
+        When submitting a project request you agree to provide accurate information about the
+        property and your contact details, and confirm you are authorized to request work on the
+        property described.
+      </p>
+
+      <h2>Contractor Relationships</h2>
+      <p>
+        Any estimate, contract, warranty, scheduling commitment or dispute is strictly between you
+        and the contractor. Evaluate contractors independently, including qualifications and
+        insurance, before hiring.
+      </p>
+
+      <h2>Limitation of Liability</h2>
+      <p>
+        The website is provided "as is" without warranties of any kind. To the maximum extent
+        permitted by law, the operators of this website are not liable for damages arising from use
+        of the site, reliance on its content, or work performed by independent contractors.
+      </p>
+
+      <h2>Intellectual Property</h2>
+      <p>
+        Site content, branding and design may not be copied or republished without permission.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        These terms may be updated from time to time; the current version is always published on
+        this page.
+      </p>
+
+      <h2>Contact</h2>
+      <p>Questions about these terms: see the <a href="/contact/">contact page</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-wrap { max-width: 760px; }
+  h2 { margin-top: 1.75rem; }
+</style>

@@ -1,0 +1,282 @@
+---
+import { NAV } from '../data/nav';
+import { SITE } from '../config';
+---
+
+<div class="utility-bar">
+  <div class="container utility-inner">
+    <span class="utility-tag">Serving Rural Properties Across Upper Cumberland</span>
+    <span class="utility-cta">
+      Planning a Clearing Project?
+      <a href="/request-estimate/" data-track="utility_cta_click">Request a Project Review</a>
+      <a class="utility-phone" href={`tel:${SITE.phoneTel}`} data-track="phone_click" data-track-label="header">
+        Call {SITE.phoneDisplay}
+      </a>
+    </span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label={`${SITE.name} — home`}>
+      <img src={SITE.logoPath} alt={`${SITE.name} logo`} width="56" height="56" />
+      <span class="brand-text">
+        <span class="brand-top">Upper Cumberland</span>
+        <span class="brand-bottom">Land Clearing</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        {NAV.map((item) => (
+          <li class={item.children ? 'has-dropdown' : ''}>
+            {item.children ? (
+              <>
+                <button type="button" class="nav-link nav-toggle" aria-expanded="false">
+                  {item.label}
+                  <svg width="10" height="7" viewBox="0 0 10 7" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </button>
+                <ul class="dropdown">
+                  {item.children.map((c) => (
+                    <li><a href={c.href}>{c.label}</a></li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <a class="nav-link" href={item.href}>{item.label}</a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <a class="btn btn-orange header-cta" href="/request-estimate/" data-track="request_estimate_click" data-track-label="header">
+      Request a Project Review
+    </a>
+
+    <button type="button" class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+    <ul>
+      {NAV.map((item) => (
+        <li>
+          {item.children ? (
+            <details>
+              <summary>{item.label}</summary>
+              <ul>
+                {item.children.map((c) => (
+                  <li><a href={c.href}>{c.label}</a></li>
+                ))}
+              </ul>
+            </details>
+          ) : (
+            <a href={item.href}>{item.label}</a>
+          )}
+        </li>
+      ))}
+      <li class="mobile-menu-cta">
+        <a class="btn btn-orange" href="/request-estimate/" data-track="request_estimate_click" data-track-label="mobile_menu">Request a Project Review</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .utility-bar {
+    background: var(--green-dark);
+    color: #dfe5d3;
+    font-size: 0.82rem;
+  }
+  .utility-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .utility-cta { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+  .utility-cta a { color: var(--orange); font-weight: 600; text-decoration: none; }
+  .utility-cta a:hover { text-decoration: underline; }
+  .utility-phone { color: #fff !important; font-weight: 600; }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding-block: 0.55rem;
+  }
+  .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+  .brand img { width: 56px; height: 56px; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
+  .brand-top {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--green-deep);
+  }
+  .brand-bottom {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--charcoal);
+  }
+
+  .main-nav { margin-left: auto; }
+  .nav-list { list-style: none; display: flex; gap: 0.25rem; margin: 0; padding: 0; }
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    text-decoration: none;
+    background: none;
+    border: 0;
+    padding: 0.55rem 0.65rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .nav-link:hover { background: var(--cream); color: var(--green-deep); }
+
+  .has-dropdown { position: relative; }
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    list-style: none;
+    margin: 0;
+    padding: 0.4rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+    z-index: 50;
+  }
+  .has-dropdown:hover .dropdown,
+  .has-dropdown:focus-within .dropdown,
+  .has-dropdown.open .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .dropdown a {
+    display: block;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--charcoal);
+    border-radius: 6px;
+  }
+  .dropdown a:hover { background: var(--cream); color: var(--green-deep); }
+
+  .header-cta { font-size: 0.85rem; padding: 0.6rem 1rem; white-space: nowrap; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .hamburger span {
+    width: 26px;
+    height: 3px;
+    background: var(--charcoal);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .hamburger[aria-expanded='true'] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger[aria-expanded='true'] span:nth-child(2) { opacity: 0; }
+  .hamburger[aria-expanded='true'] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  .mobile-menu { border-top: 1px solid var(--border); background: var(--white); }
+  .mobile-menu ul { list-style: none; margin: 0; padding: 0.5rem 1rem 1rem; }
+  .mobile-menu li + li { border-top: 1px solid var(--cream-dark); }
+  .mobile-menu a,
+  .mobile-menu summary {
+    display: block;
+    padding: 0.8rem 0.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--charcoal);
+    cursor: pointer;
+  }
+  .mobile-menu details ul { padding: 0 0 0.5rem 1rem; }
+  .mobile-menu details li { border: 0; }
+  .mobile-menu details a { font-weight: 400; padding-block: 0.5rem; }
+  .mobile-menu-cta { padding-top: 0.9rem; border-top: 0 !important; }
+  .mobile-menu-cta .btn { display: block; }
+
+  @media (max-width: 1080px) {
+    .main-nav, .header-cta { display: none; }
+    .hamburger { display: flex; }
+    .utility-tag { display: none; }
+    .utility-inner { justify-content: center; }
+  }
+  @media (min-width: 1081px) {
+    .mobile-menu { display: none; }
+  }
+</style>
+
+<script>
+  // Mobile hamburger
+  const burger = document.querySelector<HTMLButtonElement>('.hamburger');
+  const menu = document.getElementById('mobile-menu');
+  burger?.addEventListener('click', () => {
+    const open = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!open));
+    burger.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+    if (menu) menu.hidden = open;
+  });
+
+  // Desktop dropdowns: click/keyboard support in addition to hover
+  document.querySelectorAll<HTMLButtonElement>('.nav-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const li = btn.closest('li');
+      const open = li?.classList.toggle('open') ?? false;
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!(e.target as HTMLElement).closest('.has-dropdown')) {
+      document.querySelectorAll('.has-dropdown.open').forEach((li) => {
+        li.classList.remove('open');
+        li.querySelector('.nav-toggle')?.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.has-dropdown.open').forEach((li) => {
+        li.classList.remove('open');
+        li.querySelector('.nav-toggle')?.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+</script>

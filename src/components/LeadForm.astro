@@ -1,0 +1,297 @@
+---
+import { SITE, CONSENT_TEXT } from '../config';
+import {
+  SERVICE_OPTIONS,
+  ACREAGE_OPTIONS,
+  CONDITION_OPTIONS,
+  INTENDED_USE_OPTIONS,
+  TERRAIN_OPTIONS,
+  ACCESS_OPTIONS,
+  TIMING_OPTIONS,
+} from '../data/form-options';
+
+interface Props {
+  /** Unique per page-placement so ids don't collide when the form appears twice. */
+  idPrefix?: string;
+  heading?: string;
+}
+const { idPrefix = 'lead', heading = 'Request a Land-Clearing Project Review' } = Astro.props;
+const p = idPrefix;
+
+const selects: {
+  id: string;
+  name: string;
+  label: string;
+  options: readonly string[];
+  placeholder: string;
+}[] = [
+  { id: 'acreage', name: 'acreage', label: 'Approximate Acreage', options: ACREAGE_OPTIONS, placeholder: 'Select Acreage' },
+  { id: 'service', name: 'service', label: 'Service Needed', options: SERVICE_OPTIONS, placeholder: 'Select a Service' },
+  { id: 'condition', name: 'condition', label: 'Current Property Condition', options: CONDITION_OPTIONS, placeholder: 'Select One' },
+  { id: 'intended_use', name: 'intended_use', label: 'Intended Use After Clearing', options: INTENDED_USE_OPTIONS, placeholder: 'Select One' },
+  { id: 'terrain', name: 'terrain', label: 'Terrain', options: TERRAIN_OPTIONS, placeholder: 'Select One' },
+  { id: 'access', name: 'access', label: 'Equipment Access', options: ACCESS_OPTIONS, placeholder: 'Select One' },
+  { id: 'timing', name: 'timing', label: 'Preferred Project Timing', options: TIMING_OPTIONS, placeholder: 'Select One' },
+];
+---
+
+<div class="lead-form-wrap" id={`${p}-form-wrap`}>
+  <div class="lead-form-head">
+    <h2>{heading}</h2>
+  </div>
+
+  <form class="lead-form" novalidate data-turnstile-key={SITE.turnstileSiteKey}>
+    <div class="field">
+      <label for={`${p}-name`}>Full Name <span class="req" aria-hidden="true">*</span></label>
+      <input id={`${p}-name`} name="full_name" type="text" required autocomplete="name" maxlength="120" />
+      <p class="field-error" id={`${p}-name-err`}>Please enter your full name.</p>
+    </div>
+
+    <div class="field">
+      <label for={`${p}-phone`}>Phone Number <span class="req" aria-hidden="true">*</span></label>
+      <input id={`${p}-phone`} name="phone" type="tel" required autocomplete="tel" maxlength="30" inputmode="tel" />
+      <p class="field-error" id={`${p}-phone-err`}>Please enter a valid phone number.</p>
+    </div>
+
+    <div class="field">
+      <label for={`${p}-email`}>Email Address <span class="req" aria-hidden="true">*</span></label>
+      <input id={`${p}-email`} name="email" type="email" required autocomplete="email" maxlength="200" />
+      <p class="field-error" id={`${p}-email-err`}>Please enter a valid email address.</p>
+    </div>
+
+    <div class="field">
+      <label for={`${p}-location`}>Property Address or Nearest Location <span class="req" aria-hidden="true">*</span></label>
+      <input id={`${p}-location`} name="property_location" type="text" required maxlength="250" placeholder="Address, road name or nearest crossroads" />
+      <p class="field-error" id={`${p}-location-err`}>Please tell us where the property is.</p>
+    </div>
+
+    <div class="field">
+      <label for={`${p}-city`}>City or County <span class="req" aria-hidden="true">*</span></label>
+      <input id={`${p}-city`} name="city_or_county" type="text" required maxlength="120" placeholder="e.g. Cookeville / Putnam County" />
+      <p class="field-error" id={`${p}-city-err`}>Please enter a city or county.</p>
+    </div>
+
+    {selects.map((s) => (
+      <div class="field">
+        <label for={`${p}-${s.id}`}>{s.label} <span class="req" aria-hidden="true">*</span></label>
+        <select id={`${p}-${s.id}`} name={s.name} required>
+          <option value="">— {s.placeholder} —</option>
+          {s.options.map((o) => (
+            <option value={o}>{o}</option>
+          ))}
+        </select>
+        <p class="field-error" id={`${p}-${s.id}-err`}>Please select an option.</p>
+      </div>
+    ))}
+
+    <div class="field">
+      <label for={`${p}-details`}>Additional Details <span class="req" aria-hidden="true">*</span></label>
+      <textarea id={`${p}-details`} name="details" rows="4" required maxlength="4000" placeholder="Anything a contractor should know — gates, utilities, structures, keep-trees, drainage…"></textarea>
+      <p class="field-error" id={`${p}-details-err`}>Please add a short description of the project.</p>
+    </div>
+
+    <div class="field">
+      <label for={`${p}-photos`}>Upload Photos <span class="optional">(optional — JPG, PNG or HEIC, up to 6 files, 10&nbsp;MB each)</span></label>
+      <input id={`${p}-photos`} name="photos" type="file" multiple accept=".jpg,.jpeg,.png,.heic,image/jpeg,image/png,image/heic" />
+      <p class="field-error" id={`${p}-photos-err`}>Please check the file types and sizes (JPG/PNG/HEIC, max 6 files, 10 MB each).</p>
+      <p class="field-hint">Wide views, the entrance, and the densest vegetation help most.</p>
+    </div>
+
+    <!-- Honeypot — hidden from real users; bots fill it. -->
+    <div class="hp-field" aria-hidden="true">
+      <label for={`${p}-website`}>Website</label>
+      <input id={`${p}-website`} name="website" type="text" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <input type="hidden" name="source_page" value={Astro.url.pathname} />
+
+    {SITE.turnstileSiteKey && <div class="turnstile-slot" data-sitekey={SITE.turnstileSiteKey}></div>}
+
+    <p class="form-error" role="alert" hidden></p>
+
+    <button type="submit" class="btn btn-orange btn-lg submit-btn" data-track="form_submit_click">
+      Submit Property Details
+    </button>
+
+    <p class="consent">{CONSENT_TEXT}</p>
+  </form>
+
+  <div class="form-success" hidden>
+    <h3>Request received</h3>
+    <p>
+      Your project details were submitted successfully. If the project can be reviewed, you will be
+      contacted about scope, access and next steps.
+    </p>
+    <p class="lead-ref"></p>
+  </div>
+</div>
+
+<style>
+  .lead-form-wrap {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+  }
+  .lead-form-head {
+    background: var(--green-deep);
+    padding: 1rem 1.25rem;
+  }
+  .lead-form-head h2 {
+    color: var(--white);
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .lead-form { padding: 1.25rem; }
+  .field-hint { font-size: 0.78rem; color: var(--text-muted); margin: 0.25rem 0 0; }
+  .optional { font-weight: 400; font-size: 0.78rem; color: var(--text-muted); }
+  .hp-field { position: absolute; left: -9999px; top: -9999px; height: 1px; overflow: hidden; }
+  .turnstile-slot { margin-block: 0.75rem; min-height: 66px; }
+  .submit-btn { width: 100%; margin-top: 0.5rem; }
+  .submit-btn[disabled] { opacity: 0.6; cursor: wait; transform: none; }
+  .form-error {
+    background: #fbeae5;
+    border: 1px solid #e0a08e;
+    color: #8c2410;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.88rem;
+  }
+  .consent { font-size: 0.75rem; color: var(--text-muted); margin: 0.9rem 0 0; }
+  .form-success { padding: 1.5rem 1.25rem; }
+  .form-success h3 { color: var(--green-deep); }
+  .lead-ref { font-weight: 600; }
+</style>
+
+<script>
+  const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/heic', 'image/heif'];
+  const ALLOWED_EXT = /\.(jpe?g|png|heic|heif)$/i;
+  const MAX_FILES = 6;
+  const MAX_FILE_BYTES = 10 * 1024 * 1024;
+
+  function trackEvent(event: string, detail: Record<string, string>) {
+    const w = window as unknown as { dataLayer?: unknown[] };
+    w.dataLayer = w.dataLayer || [];
+    w.dataLayer.push({ event, ...detail });
+  }
+
+  document.querySelectorAll<HTMLFormElement>('.lead-form').forEach((form) => {
+    const wrap = form.closest<HTMLElement>('.lead-form-wrap')!;
+    const successBox = wrap.querySelector<HTMLElement>('.form-success')!;
+    const formError = form.querySelector<HTMLElement>('.form-error')!;
+    const submitBtn = form.querySelector<HTMLButtonElement>('.submit-btn')!;
+    let started = false;
+
+    // Turnstile: load script lazily once a keyed form exists on the page.
+    const tsSlot = form.querySelector<HTMLElement>('.turnstile-slot');
+    if (tsSlot && !document.querySelector('script[src*="challenges.cloudflare.com"]')) {
+      const s = document.createElement('script');
+      s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+      s.async = true;
+      s.defer = true;
+      document.head.appendChild(s);
+      tsSlot.classList.add('cf-turnstile');
+    } else if (tsSlot) {
+      tsSlot.classList.add('cf-turnstile');
+    }
+
+    form.addEventListener('input', (e) => {
+      if (!started) {
+        started = true;
+        trackEvent('form_start', { form_location: form.querySelector<HTMLInputElement>('[name=source_page]')?.value ?? '' });
+      }
+      const t = e.target as HTMLInputElement;
+      t.closest('.field')?.classList.remove('invalid');
+      if (t.type === 'file') trackEvent('photo_upload', { files: String(t.files?.length ?? 0) });
+    });
+
+    function markInvalid(el: HTMLElement) {
+      el.closest('.field')?.classList.add('invalid');
+    }
+
+    function validate(): boolean {
+      let firstBad: HTMLElement | null = null;
+      form.querySelectorAll('[required]').forEach((node) => {
+        // input, select and textarea all expose .value/.type via this cast
+        const el = node as HTMLInputElement;
+        let bad = !el.value.trim();
+        if (!bad) {
+          if (el.type === 'email') bad = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value);
+          if (el.type === 'tel') bad = el.value.replace(/\D/g, '').length < 10;
+        }
+        if (bad) {
+          markInvalid(el);
+          firstBad ??= el;
+        }
+      });
+      const files = form.querySelector<HTMLInputElement>('input[type=file]');
+      if (files?.files && files.files.length > 0) {
+        const list = Array.from(files.files);
+        const bad =
+          list.length > MAX_FILES ||
+          list.some(
+            (f) => f.size > MAX_FILE_BYTES || (!ALLOWED_TYPES.includes(f.type) && !ALLOWED_EXT.test(f.name)),
+          );
+        if (bad) {
+          markInvalid(files);
+          firstBad ??= files;
+        }
+      }
+      if (firstBad) {
+        (firstBad as HTMLElement).focus();
+        return false;
+      }
+      return true;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formError.hidden = true;
+      if (!validate()) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting…';
+
+      try {
+        const data = new FormData(form);
+        const res = await fetch('/api/lead', { method: 'POST', body: data });
+        const json = (await res.json().catch(() => null)) as { ok?: boolean; leadId?: string; error?: string } | null;
+
+        if (!res.ok || !json?.ok) {
+          throw new Error(json?.error || 'The request could not be submitted. Please try again or call instead.');
+        }
+
+        trackEvent('form_complete', {
+          service: String(data.get('service') ?? ''),
+          city_or_county: String(data.get('city_or_county') ?? ''),
+          acreage: String(data.get('acreage') ?? ''),
+        });
+
+        form.hidden = true;
+        wrap.querySelector('.lead-form-head')?.setAttribute('hidden', '');
+        successBox.hidden = false;
+        if (json.leadId) {
+          successBox.querySelector('.lead-ref')!.textContent = `Reference number: ${json.leadId}`;
+        }
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Route to thank-you page, keeping only the non-identifying reference.
+        setTimeout(() => {
+          window.location.href = `/thank-you/${json.leadId ? `?ref=${encodeURIComponent(json.leadId)}` : ''}`;
+        }, 1200);
+      } catch (err) {
+        formError.textContent =
+          err instanceof Error && err.message
+            ? err.message
+            : 'Something went wrong submitting the form. Please try again, or call us instead.';
+        formError.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Property Details';
+        // Reset Turnstile so an expired token can be re-issued.
+        const w = window as unknown as { turnstile?: { reset: () => void } };
+        w.turnstile?.reset?.();
+      }
+    });
+  });
+</script>

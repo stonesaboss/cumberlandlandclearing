@@ -1,0 +1,17 @@
+# Cloudflare Pages redirects.
+#
+# Canonical-host redirect (www → apex) is best configured with a Cloudflare
+# "Redirect Rule" on the zone once the custom domain is attached, e.g.:
+#   https://www.uppercumberlandlandclearing.com/* → https://uppercumberlandlandclearing.com/$1  (301)
+# HTTP→HTTPS is automatic on Cloudflare Pages.
+#
+# Add retired/renamed paths below as the site evolves. Keep redirects
+# specific — do NOT add a catch-all to the homepage; missing pages should
+# return the custom 404.
+
+# Convenience aliases → real pages
+/estimate/            /request-estimate/            301
+/quote/               /request-estimate/            301
+/services/            /land-clearing-cookeville-tn/ 301
+/forestry-mulching/   /forestry-mulching-cookeville-tn/ 301
+/land-clearing/       /land-clearing-cookeville-tn/ 301

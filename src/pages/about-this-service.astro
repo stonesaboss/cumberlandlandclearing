@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { breadcrumbSchema } from '../lib/schema';
+
+const title = 'About This Service | Upper Cumberland Land Clearing';
+const description =
+  'How Upper Cumberland Land Clearing works: an independent project-request and referral service connecting property owners with local land-clearing contractors in Tennessee.';
+
+const siteUrl = (Astro.site?.href ?? '').replace(/\/$/, '');
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'About This Service', href: '/about-this-service/' },
+];
+---
+
+<BaseLayout title={title} description={description} schema={[breadcrumbSchema(siteUrl, crumbs)]}>
+  <Breadcrumbs crumbs={crumbs} />
+  <section class="section">
+    <div class="container about-wrap">
+      <h1>About This Service</h1>
+      <p class="lead-para">
+        Upper Cumberland Land Clearing is an independent project-request and referral service for
+        land clearing, forestry mulching and related rural-property work across the Upper
+        Cumberland region of Tennessee.
+      </p>
+
+      <h2>What This Website Does</h2>
+      <ul>
+        <li>Collects detailed land-clearing project requests from property owners in one structured format</li>
+        <li>Reviews requests for completeness, location and project type</li>
+        <li>May route qualifying requests to local contractors whose equipment and coverage fit</li>
+        <li>Publishes practical information about clearing methods, project planning and the region</li>
+      </ul>
+
+      <h2>What This Website Does Not Do</h2>
+      <ul>
+        <li>It does not directly perform land-clearing work unless otherwise stated</li>
+        <li>It does not guarantee contractor availability, pricing, scheduling or service</li>
+        <li>It does not certify, license or insure contractors — verify qualifications directly with any contractor you hire</li>
+        <li>It does not charge property owners to submit a request</li>
+      </ul>
+
+      <h2>Why It Works This Way</h2>
+      <p>
+        Land-clearing demand in this region is spread across many small rural projects, and the
+        contractors who do the work spend their days on machines, not answering web forms. A
+        structured request — location, acreage, vegetation, terrain, access, intended use and
+        photos — lets a contractor evaluate whether a project fits before anyone drives an hour to
+        look at a fence line.
+      </p>
+      <p>
+        Full details of how requests are shared are in the
+        <a href="/referral-disclosure/">referral disclosure</a>. How your information is handled is
+        covered in the <a href="/privacy-policy/">privacy policy</a>.
+      </p>
+    </div>
+  </section>
+  <CtaBand />
+</BaseLayout>
+
+<style>
+  .about-wrap { max-width: 800px; }
+  .lead-para { font-size: 1.08rem; }
+  h2 { margin-top: 1.75rem; }
+</style>

@@ -1,0 +1,23 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# environment & secrets — never commit credentials
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+!.env.example
+
+# wrangler local state
+.wrangler/
+
+# logs
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db

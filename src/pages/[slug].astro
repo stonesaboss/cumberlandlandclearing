@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import CtaBand from '../components/CtaBand.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { allServicePages } from '../data/pages';
+import { breadcrumbSchema, serviceSchema, faqSchema } from '../lib/schema';
+
+export function getStaticPaths() {
+  return allServicePages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const siteUrl = (Astro.site?.href ?? '').replace(/\/$/, '');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: page.breadcrumbLabel, href: `/${page.slug}/` },
+];
+
+const schema = [
+  breadcrumbSchema(siteUrl, crumbs),
+  serviceSchema(siteUrl, {
+    name: page.serviceType,
+    description: page.metaDescription,
+    url: `/${page.slug}/`,
+    areaServed: page.areaServed,
+  }),
+  ...(page.faqs.length ? [faqSchema(page.faqs)] : []),
+];
+---
+
+<BaseLayout title={page.metaTitle} description={page.metaDescription} schema={schema} ogImage={page.image}>
+  <Breadcrumbs crumbs={crumbs} />
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">{page.eyebrow}</p>
+      <h1>{page.h1}</h1>
+    </div>
+  </section>
+
+  <div class="container page-grid section">
+    <article class="page-content">
+      {page.intro.map((para) => (
+        <p class="lead-para">{para}</p>
+      ))}
+
+      <img src={page.image} alt={page.imageAlt} width="1200" height="700" loading="lazy" class="page-image" />
+
+      {page.sections.map((s) => (
+        <section class="content-section">
+          <h2>{s.heading}</h2>
+          {s.paragraphs?.map((para) => <p>{para}</p>)}
+          {s.bullets && (
+            <ul>
+              {s.bullets.map((b) => (
+                <li>{b}</li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))}
+
+      <section class="content-section related-links">
+        <h2>Related Services and Areas</h2>
+        <ul>
+          {page.related.map((r) => (
+            <li><a href={r.href}>{r.label}</a></li>
+          ))}
+          {!page.related.some((r) => r.href === '/service-area/') && (
+            <li><a href="/service-area/">Upper Cumberland Land-Clearing Service Area</a></li>
+          )}
+        </ul>
+      </section>
+    </article>
+
+    <aside class="page-sidebar">
+      <div class="sidebar-sticky">
+        <LeadForm idPrefix={`sp-${page.slug.slice(0, 12)}`} />
+      </div>
+    </aside>
+  </div>
+
+  {page.faqs.length > 0 && <FaqAccordion faqs={page.faqs} heading={`${page.breadcrumbLabel} Questions`} />}
+
+  <CtaBand />
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: var(--green-deep);
+    color: var(--white);
+    padding-block: clamp(2rem, 5vw, 3.5rem);
+  }
+  .page-hero h1 { color: var(--white); margin: 0; }
+  .eyebrow {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: var(--orange);
+    margin-bottom: 0.4rem;
+  }
+  .page-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .lead-para { font-size: 1.08rem; }
+  .page-image { border-radius: var(--radius); margin-block: 1rem 1.5rem; box-shadow: var(--shadow-sm); }
+  .content-section { margin-top: 1.75rem; }
+  .related-links ul { list-style: none; padding: 0; }
+  .related-links li { margin-bottom: 0.4rem; }
+  .related-links a { font-weight: 600; }
+  .sidebar-sticky { position: sticky; top: 90px; }
+  @media (max-width: 980px) {
+    .page-grid { grid-template-columns: 1fr; }
+    .sidebar-sticky { position: static; }
+  }
+</style>

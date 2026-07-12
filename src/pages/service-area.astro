@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ServiceAreaMap from '../components/ServiceAreaMap.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { breadcrumbSchema } from '../lib/schema';
+
+const title = 'Upper Cumberland Land-Clearing Service Area | TN Coverage';
+const description =
+  'Where land-clearing and forestry-mulching project requests are reviewed: Cookeville, Crossville, Sparta, Livingston, Smithville and rural communities across Upper Cumberland, Tennessee.';
+
+const siteUrl = (Astro.site?.href ?? '').replace(/\/$/, '');
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Service Area', href: '/service-area/' },
+];
+
+const areas = [
+  {
+    name: 'Cookeville & Putnam County',
+    href: '/land-clearing-cookeville-tn/',
+    copy: 'The primary market — residential lots, rural acreage, farms and building sites around Cookeville, Algood, Baxter and Monterey.',
+  },
+  {
+    name: 'Crossville & Cumberland County',
+    href: '/land-clearing-crossville-tn/',
+    copy: 'Plateau tracts, larger wooded parcels, rolling and rocky ground, recreational acreage and homesites.',
+  },
+  {
+    name: 'Sparta & White County',
+    href: '/land-clearing-sparta-tn/',
+    copy: 'Farm and pasture country — reclamation, fence lines, bottomland cleanup and access work.',
+  },
+  {
+    name: 'Livingston & Overton County',
+    href: '/land-clearing-livingston-smithville-tn/',
+    copy: 'Rural and agricultural parcels across the northern Upper Cumberland, matched to contractors case-by-case.',
+  },
+  {
+    name: 'Smithville & DeKalb County',
+    href: '/land-clearing-livingston-smithville-tn/',
+    copy: 'Center Hill Lake–area lots, sloped ground and farm property in the western part of the region.',
+  },
+];
+---
+
+<BaseLayout title={title} description={description} schema={[breadcrumbSchema(siteUrl, crumbs)]}>
+  <Breadcrumbs crumbs={crumbs} />
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Regional Coverage</p>
+      <h1>Upper Cumberland Land-Clearing Service Area</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container area-layout">
+      <div>
+        <p class="lead-para">
+          Project requests are reviewed for properties across the Upper Cumberland region of
+          Tennessee. Coverage is strongest around the primary markets below and extends to
+          surrounding rural communities depending on contractor availability, project size and
+          access.
+        </p>
+        <div class="area-cards">
+          {areas.map((a) => (
+            <a class="card area-card" href={a.href}>
+              <h2>{a.name}</h2>
+              <p>{a.copy}</p>
+            </a>
+          ))}
+        </div>
+        <p class="disclosure-note">
+          Property location, contractor coverage, access and project scope may affect availability.
+          Submit the property address or nearest road to check whether a project can be reviewed.
+        </p>
+      </div>
+      <div class="map-col">
+        <ServiceAreaMap />
+        <a class="btn btn-orange btn-lg map-cta" href="/request-estimate/" data-track="request_estimate_click" data-track-label="service_area_page">Check Your Property Location</a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>
+
+<style>
+  .page-hero { background: var(--green-deep); color: var(--white); padding-block: clamp(2rem, 5vw, 3.5rem); }
+  .page-hero h1 { color: var(--white); margin: 0; }
+  .eyebrow { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; color: var(--orange); margin-bottom: 0.4rem; }
+  .lead-para { font-size: 1.08rem; }
+  .area-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: start; }
+  .area-cards { display: grid; gap: 1rem; margin-block: 1.5rem; }
+  .area-card { display: block; padding: 1.1rem 1.3rem; text-decoration: none; }
+  .area-card h2 { font-size: 1.15rem; color: var(--green-deep); margin-bottom: 0.3rem; }
+  .area-card p { margin: 0; font-size: 0.92rem; color: var(--text-muted); }
+  .map-col { position: sticky; top: 100px; }
+  .map-cta { display: block; margin-top: 1.25rem; }
+  @media (max-width: 860px) {
+    .area-layout { grid-template-columns: 1fr; }
+    .map-col { position: static; }
+  }
+</style>
