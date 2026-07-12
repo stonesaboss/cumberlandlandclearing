@@ -71,6 +71,11 @@ ul { padding-left: 1.3em; }
 }
 .skip-link:focus { left: 0; }
 
+/* The hidden attribute must always win, even over author display values —
+   without this, components that set display on a [hidden] element (e.g. the
+   FAQ panels) can paint their content stacked on some mobile browsers. */
+[hidden] { display: none !important; }
+
 .visually-hidden {
   position: absolute !important;
   width: 1px; height: 1px;

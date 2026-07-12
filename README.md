@@ -88,8 +88,9 @@ Both are optional; the endpoint works without them (webhook/email delivery only)
 
 All in [`src/config.ts`](src/config.ts) unless noted:
 
-1. **Logo** — replace `public/logos/logo.svg` with the finalized supplied logo file (e.g.
-   `public/logos/logo.png`) and update `logoPath`. The current SVG is a temporary placeholder.
+1. **Logo** — done: the finalized logo ships as `public/logos/logo.webp` (480px web version)
+   with the original at `public/logos/logo-full.png`. Favicon and apple-touch-icon are derived
+   from it.
 2. **Phone** — `phoneDisplay` / `phoneTel` (currently a fictional 555 number).
 3. **Email** — `email`.
 4. **Imagery** — files in `public/images/` are illustrated placeholders. Replace with real,

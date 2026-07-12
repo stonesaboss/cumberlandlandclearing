@@ -21,10 +21,10 @@ export const SITE = {
   email: 'projects@uppercumberlandlandclearing.com',
 
   /**
-   * Logo file. Replace public/logos/logo.svg with the finalized supplied
-   * logo (e.g. drop in public/logos/logo.png) and update this path.
+   * Finalized supplied logo. logo.webp is the 480px web version;
+   * logo-full.png is the original full-resolution asset.
    */
-  logoPath: '/logos/logo.svg',
+  logoPath: '/logos/logo.webp',
 
   /** Browser-safe integration IDs — set via Cloudflare Pages env vars. */
   analyticsId: import.meta.env.PUBLIC_ANALYTICS_ID ?? '',
