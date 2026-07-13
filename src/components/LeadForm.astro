@@ -18,6 +18,14 @@ interface Props {
 const { idPrefix = 'lead', heading = 'Request a Land-Clearing Project Review' } = Astro.props;
 const p = idPrefix;
 
+/**
+ * Cloudflare Turnstile site key — browser-safe, inlined at build time.
+ * Set PUBLIC_TURNSTILE_SITE_KEY in Cloudflare Pages (Production AND Preview
+ * build environments). When unset (e.g. local dev), the widget is omitted and
+ * the backend skips verification unless TURNSTILE_SECRET_KEY is configured.
+ */
+const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
+
 const selects: {
   id: string;
   name: string;
@@ -40,7 +48,7 @@ const selects: {
     <h2>{heading}</h2>
   </div>
 
-  <form class="lead-form" novalidate data-turnstile-key={SITE.turnstileSiteKey}>
+  <form class="lead-form" novalidate>
     <div class="field">
       <label for={`${p}-name`}>Full Name <span class="req" aria-hidden="true">*</span></label>
       <input id={`${p}-name`} name="full_name" type="text" required autocomplete="name" maxlength="120" />
@@ -105,7 +113,7 @@ const selects: {
 
     <input type="hidden" name="source_page" value={Astro.url.pathname} />
 
-    {SITE.turnstileSiteKey && <div class="turnstile-slot" data-sitekey={SITE.turnstileSiteKey}></div>}
+    {TURNSTILE_SITE_KEY && <div class="turnstile-slot" data-sitekey={TURNSTILE_SITE_KEY}></div>}
 
     <p class="form-error" role="alert" hidden></p>
 

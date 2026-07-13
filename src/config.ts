@@ -26,10 +26,13 @@ export const SITE = {
    */
   logoPath: '/logos/logo.webp',
 
-  /** Browser-safe integration IDs — set via Cloudflare Pages env vars. */
+  /**
+   * Browser-safe integration IDs — set via Cloudflare Pages env vars.
+   * (The Turnstile site key is read directly from PUBLIC_TURNSTILE_SITE_KEY
+   * in src/components/LeadForm.astro.)
+   */
   analyticsId: import.meta.env.PUBLIC_ANALYTICS_ID ?? '',
   tagManagerId: import.meta.env.PUBLIC_TAG_MANAGER_ID ?? '',
-  turnstileSiteKey: import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '',
 } as const;
 
 /** Shown near the form and in the footer. Required disclosure — do not remove. */
