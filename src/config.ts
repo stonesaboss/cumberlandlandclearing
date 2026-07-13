@@ -10,12 +10,8 @@ export const SITE = {
   shortName: 'UC Land Clearing',
   region: 'Upper Cumberland, Tennessee',
 
-  /**
-   * TODO: replace with the real tracking phone number before launch.
-   * The 555 number below is an intentionally fictional placeholder.
-   */
-  phoneDisplay: '(931) 555-0123',
-  phoneTel: '+19315550123',
+  phoneDisplay: '(629) 888-3733',
+  phoneTel: '+16298883733',
 
   email: 'projects@cumberlandlandclearing.com',
 
