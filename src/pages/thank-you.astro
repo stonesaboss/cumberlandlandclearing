@@ -40,9 +40,13 @@ const description = 'Your land-clearing project request was received.';
       p.hidden = false;
     }
     // Thank-you page view event (form_complete fires only after server confirmation).
-    const w = window as unknown as { dataLayer?: unknown[] };
-    w.dataLayer = w.dataLayer || [];
-    w.dataLayer.push({ event: 'thank_you_view' });
+    const w = window as unknown as { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
+    if (typeof w.gtag === 'function') {
+      w.gtag('event', 'thank_you_view');
+    } else {
+      w.dataLayer = w.dataLayer || [];
+      w.dataLayer.push({ event: 'thank_you_view' });
+    }
   </script>
 </BaseLayout>
 

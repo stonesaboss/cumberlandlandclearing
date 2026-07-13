@@ -11,7 +11,8 @@
   // src/components/LeadForm.astro also carries this site key as its built-in
   // fallback so the widget renders even without a dashboard build var.
   "vars": {
-    "PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAAD0-2TnxP2Vp7Ht6"
+    "PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAAD0-2TnxP2Vp7Ht6",
+    "PUBLIC_ANALYTICS_ID": "G-6NBXC4SXPG"
   },
 
   // Private R2 bucket for visitor photo uploads. The bucket stays private:

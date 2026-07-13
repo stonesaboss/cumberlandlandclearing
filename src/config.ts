@@ -26,7 +26,7 @@ export const SITE = {
    * (The Turnstile site key is read directly from PUBLIC_TURNSTILE_SITE_KEY
    * in src/components/LeadForm.astro.)
    */
-  analyticsId: import.meta.env.PUBLIC_ANALYTICS_ID ?? '',
+  analyticsId: import.meta.env.PUBLIC_ANALYTICS_ID || 'G-6NBXC4SXPG',
   tagManagerId: import.meta.env.PUBLIC_TAG_MANAGER_ID ?? '',
 } as const;
 

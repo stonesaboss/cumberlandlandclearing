@@ -78,13 +78,21 @@ const allSchema = [organizationSchema(siteUrl), websiteSchema(siteUrl), ...schem
     <StickyMobileBar />
 
     <script>
-      // Lightweight event tracking: any element with data-track pushes to dataLayer.
+      // Lightweight event tracking: any element with data-track fires an event.
+      // gtag('event', …) when plain GA4 is active; dataLayer push for GTM
+      // (gtag.js ignores plain-object dataLayer pushes — GTM syntax only).
       document.addEventListener('click', (e) => {
         const el = (e.target as HTMLElement).closest<HTMLElement>('[data-track]');
         if (!el) return;
-        const w = window as unknown as { dataLayer?: unknown[] };
-        w.dataLayer = w.dataLayer || [];
-        w.dataLayer.push({ event: el.dataset.track, label: el.dataset.trackLabel ?? '' });
+        const w = window as unknown as { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
+        const name = el.dataset.track ?? 'click';
+        const params = { label: el.dataset.trackLabel ?? '' };
+        if (typeof w.gtag === 'function') {
+          w.gtag('event', name, params);
+        } else {
+          w.dataLayer = w.dataLayer || [];
+          w.dataLayer.push({ event: name, ...params });
+        }
       });
     </script>
   </body>

@@ -179,9 +179,14 @@ const selects: {
   const MAX_FILE_BYTES = 10 * 1024 * 1024;
 
   function trackEvent(event: string, detail: Record<string, string>) {
-    const w = window as unknown as { dataLayer?: unknown[] };
-    w.dataLayer = w.dataLayer || [];
-    w.dataLayer.push({ event, ...detail });
+    // gtag('event', …) for plain GA4; dataLayer push for GTM setups.
+    const w = window as unknown as { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
+    if (typeof w.gtag === 'function') {
+      w.gtag('event', event, detail);
+    } else {
+      w.dataLayer = w.dataLayer || [];
+      w.dataLayer.push({ event, ...detail });
+    }
   }
 
   document.querySelectorAll<HTMLFormElement>('.lead-form').forEach((form) => {
