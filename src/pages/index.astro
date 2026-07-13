@@ -227,9 +227,19 @@ const schema = [faqSchema(homeFaqs)];
       <div class="mobile-form" id="home-form">
         <LeadForm idPrefix="home-m" />
       </div>
+    </div>
 
-      <!-- 4 · PROJECT TYPES -->
-      <section class="section section--cream project-types" id="project-types">
+    <!-- Desktop sidebar form (sticky beside the service cards) -->
+    <aside class="home-sidebar">
+      <div class="sidebar-sticky">
+        <LeadForm idPrefix="home-d" />
+      </div>
+    </aside>
+  </div>
+
+  <!-- 4 · PROJECT TYPES (full-width, centered) -->
+  <section class="section section--cream" id="project-types">
+    <div class="container">
         <div class="section-heading">
           <h2>What Are You Clearing the Property For?</h2>
         </div>
@@ -241,10 +251,12 @@ const schema = [faqSchema(homeFaqs)];
             </a>
           ))}
         </div>
-      </section>
+    </div>
+  </section>
 
-      <!-- 5 · COMPARISON -->
-      <section class="section" id="comparison">
+  <!-- 5 · COMPARISON (full-width, centered) -->
+  <section class="section" id="comparison">
+    <div class="container">
         <div class="section-heading">
           <h2>Land Clearing or Forestry Mulching: Which Fits Your Property?</h2>
         </div>
@@ -278,10 +290,12 @@ const schema = [faqSchema(homeFaqs)];
         <p class="compare-cta">
           <a class="btn btn-orange" href="/request-estimate/" data-track="request_estimate_click" data-track-label="comparison">Describe Your Clearing Project</a>
         </p>
-      </section>
+    </div>
+  </section>
 
-      <!-- 6 · ACREAGE SERVICES -->
-      <section class="section section--cream" id="acreage-services">
+  <!-- 6 · ACREAGE SERVICES (full-width, centered) -->
+  <section class="section section--cream" id="acreage-services">
+    <div class="container">
         <div class="section-heading">
           <h2>Clearing Solutions for Rural and Acreage Properties</h2>
         </div>
@@ -297,10 +311,12 @@ const schema = [faqSchema(homeFaqs)];
           Service availability depends on project location, equipment requirements and contractor
           capability.
         </p>
-      </section>
+    </div>
+  </section>
 
-      <!-- 7 · PROCESS -->
-      <section class="section" id="process">
+  <!-- 7 · PROCESS (full-width, centered) -->
+  <section class="section" id="process">
+    <div class="container">
         <div class="section-heading">
           <h2>How to Request Land-Clearing Service</h2>
         </div>
@@ -327,10 +343,12 @@ const schema = [faqSchema(homeFaqs)];
           </li>
         </ol>
         <p class="disclosure-note">{PROCESS_DISCLOSURE}</p>
-      </section>
+    </div>
+  </section>
 
-      <!-- 8 · CHECKLIST -->
-      <section class="section section--cream" id="checklist">
+  <!-- 8 · CHECKLIST (full-width, centered) -->
+  <section class="section section--cream" id="checklist">
+    <div class="container">
         <div class="section-heading">
           <h2>Information That Helps Contractors Evaluate Your Project</h2>
         </div>
@@ -339,26 +357,14 @@ const schema = [faqSchema(homeFaqs)];
             <li>{c}</li>
           ))}
         </ul>
-      </section>
     </div>
-
-    <!-- Desktop sidebar form (sticky through the upper page) -->
-    <aside class="home-sidebar">
-      <div class="sidebar-sticky">
-        <LeadForm idPrefix="home-d" />
-      </div>
-    </aside>
-  </div>
+  </section>
 
   <!-- 9 · PROJECT EXAMPLES -->
   <section class="section" id="examples">
     <div class="container">
       <div class="section-heading">
         <h2>Common Land-Clearing Project Types</h2>
-        <p>
-          Representative images of typical project categories across the region — not photographs
-          of completed local jobs. Verified contractor photos will be added as they are supplied.
-        </p>
       </div>
       <div class="gallery-grid">
         {gallery.map((g) => (
@@ -492,10 +498,6 @@ const schema = [faqSchema(homeFaqs)];
     align-items: start;
   }
   .home-main { min-width: 0; }
-  .home-main .section--cream {
-    border-radius: var(--radius);
-    padding-inline: clamp(1rem, 3vw, 2rem);
-  }
   .sidebar-sticky { position: sticky; top: 90px; padding-block: 2.5rem; }
   .mobile-form { display: none; }
   @media (max-width: 980px) {
