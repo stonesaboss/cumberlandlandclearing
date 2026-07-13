@@ -271,7 +271,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
             Authorization: `Bearer ${env.EMAIL_API_KEY}`,
           },
           body: JSON.stringify({
-            from: 'leads@uppercumberlandlandclearing.com',
+            from: 'leads@cumberlandlandclearing.com',
             to: [env.FORM_RECIPIENT_EMAIL],
             subject: `New land-clearing lead ${leadId} — ${lead.service_needed} in ${lead.city_or_county}`,
             text: [

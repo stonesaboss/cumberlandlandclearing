@@ -3,5 +3,4 @@ Allow: /
 Disallow: /thank-you/
 Disallow: /api/
 
-# Update if the production domain differs.
-Sitemap: https://uppercumberlandlandclearing.com/sitemap-index.xml
+Sitemap: https://cumberlandlandclearing.com/sitemap-index.xml

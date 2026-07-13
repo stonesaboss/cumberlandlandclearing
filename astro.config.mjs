@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
  * (production AND preview environments) so canonical tags, Open Graph URLs,
  * sitemap URLs and structured data always point at the production domain.
  */
-const site = process.env.PUBLIC_SITE_URL || 'https://uppercumberlandlandclearing.com';
+const site = process.env.PUBLIC_SITE_URL || 'https://cumberlandlandclearing.com';
 
 export default defineConfig({
   site,

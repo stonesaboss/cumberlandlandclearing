@@ -19,7 +19,7 @@ interface Props {
 
 const { title, description, schema = [], noindex = false, ogImage = '/images/hero/hero-forestry-mulcher.webp' } = Astro.props;
 
-const siteUrl = (Astro.site?.href ?? 'https://uppercumberlandlandclearing.com/').replace(/\/$/, '');
+const siteUrl = (Astro.site?.href ?? 'https://cumberlandlandclearing.com/').replace(/\/$/, '');
 const canonical = `${siteUrl}${Astro.url.pathname}`;
 const allSchema = [organizationSchema(siteUrl), websiteSchema(siteUrl), ...schema];
 ---

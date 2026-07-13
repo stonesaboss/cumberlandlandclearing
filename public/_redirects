@@ -2,7 +2,7 @@
 #
 # Canonical-host redirect (www → apex) is best configured with a Cloudflare
 # "Redirect Rule" on the zone once the custom domain is attached, e.g.:
-#   https://www.uppercumberlandlandclearing.com/* → https://uppercumberlandlandclearing.com/$1  (301)
+#   https://www.cumberlandlandclearing.com/* → https://cumberlandlandclearing.com/$1  (301)
 # HTTP→HTTPS is automatic on Cloudflare Pages.
 #
 # Add retired/renamed paths below as the site evolves. Keep redirects

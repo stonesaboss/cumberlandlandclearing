@@ -17,8 +17,7 @@ export const SITE = {
   phoneDisplay: '(931) 555-0123',
   phoneTel: '+19315550123',
 
-  /** TODO: replace with the real contact email before launch. */
-  email: 'projects@uppercumberlandlandclearing.com',
+  email: 'projects@cumberlandlandclearing.com',
 
   /**
    * Finalized supplied logo. logo.webp is the 480px web version;
