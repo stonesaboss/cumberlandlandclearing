@@ -567,8 +567,11 @@ const schema = [faqSchema(homeFaqs)];
   /* ── Acreage blocks ── */
   .acreage-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+  @media (max-width: 620px) {
+    .acreage-grid { grid-template-columns: 1fr; }
   }
   .acreage-card { display: block; padding: 1.1rem 1.2rem; text-decoration: none; }
   .acreage-card h3 { font-size: 1rem; color: var(--green-deep); }
