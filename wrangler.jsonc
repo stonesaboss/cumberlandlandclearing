@@ -2,7 +2,17 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "upper-cumberland-land-clearing",
   "compatibility_date": "2026-07-01",
-  "pages_build_output_dir": "dist"
+  "pages_build_output_dir": "dist",
+
+  // Browser-safe values only — never put secrets here (TURNSTILE_SECRET_KEY
+  // etc. belong in encrypted Pages secrets / .dev.vars).
+  // NOTE: these vars reach the Functions runtime, NOT the `npm run build`
+  // step. The static build reads PUBLIC_* from the Pages build environment;
+  // src/components/LeadForm.astro also carries this site key as its built-in
+  // fallback so the widget renders even without a dashboard build var.
+  "vars": {
+    "PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAAD0-2TnxP2Vp7Ht6"
+  }
 
   // ── Optional bindings ─────────────────────────────────────────────
   // The lead endpoint works without these (webhook/email delivery only).

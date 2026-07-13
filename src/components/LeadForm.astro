@@ -19,12 +19,12 @@ const { idPrefix = 'lead', heading = 'Request a Land-Clearing Project Review' } 
 const p = idPrefix;
 
 /**
- * Cloudflare Turnstile site key — browser-safe, inlined at build time.
- * Set PUBLIC_TURNSTILE_SITE_KEY in Cloudflare Pages (Production AND Preview
- * build environments). When unset (e.g. local dev), the widget is omitted and
- * the backend skips verification unless TURNSTILE_SECRET_KEY is configured.
+ * Cloudflare Turnstile site key — browser-safe and public by design (it is
+ * shipped in the HTML), so the production key doubles as the committed
+ * fallback. PUBLIC_TURNSTILE_SITE_KEY overrides it when set at build time
+ * (e.g. local .env with Cloudflare's test key). The secret key is server-only.
  */
-const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
+const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAAD0-2TnxP2Vp7Ht6';
 
 const selects: {
   id: string;
