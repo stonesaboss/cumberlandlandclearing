@@ -12,27 +12,26 @@
   // fallback so the widget renders even without a dashboard build var.
   "vars": {
     "PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAAD0-2TnxP2Vp7Ht6"
-  }
+  },
 
-  // ── Optional bindings ─────────────────────────────────────────────
-  // The lead endpoint works without these (webhook/email delivery only).
-  // To enable, create the resources in Cloudflare, paste the real IDs,
-  // and uncomment. Do NOT invent IDs.
-  //
-  // D1 lead storage (see migrations/0001_create_leads.sql):
+  // Private R2 bucket for visitor photo uploads. The bucket stays private:
+  // leads carry object keys in upload_references, not public URLs. View the
+  // photos in the Cloudflare dashboard under R2 → cumberlandlandclearing-lead-photos.
+  "r2_buckets": [
+    {
+      "binding": "LEAD_UPLOADS",
+      "bucket_name": "cumberlandlandclearing-lead-photos"
+    }
+  ]
+
+  // ── Optional binding (not enabled) ────────────────────────────────
+  // D1 lead storage (see migrations/0001_create_leads.sql). To enable,
+  // create the database, paste the real ID, and uncomment:
   // "d1_databases": [
   //   {
   //     "binding": "LEADS_DB",
   //     "database_name": "<D1_DATABASE_NAME>",
   //     "database_id": "<D1_DATABASE_ID>"
-  //   }
-  // ],
-  //
-  // Private R2 bucket for visitor photo uploads (keep the bucket private):
-  // "r2_buckets": [
-  //   {
-  //     "binding": "LEAD_UPLOADS",
-  //     "bucket_name": "<R2_BUCKET_NAME>"
   //   }
   // ]
 }
