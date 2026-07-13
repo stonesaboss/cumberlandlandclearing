@@ -13,8 +13,8 @@ export const corePages: ServicePage[] = [
       'Cookeville sits at the center of the Upper Cumberland, surrounded by wooded hillsides, rural acreage, pasture ground and a steady flow of new home construction. When trees, brush and overgrowth stand between a property and its next use, land clearing is usually the first project on the list.',
       'This page explains what land-clearing requests around Cookeville and Putnam County typically involve, what information helps a contractor evaluate the property, and how to submit a project for review.',
     ],
-    image: '/images/wooded-lot-clearing.svg',
-    imageAlt: 'Illustration of a tracked machine clearing trees and brush from a wooded property',
+    image: '/images/page-features/land-clearing.webp',
+    imageAlt: 'Tracked land-clearing machine opening a wooded rural property',
     sections: [
       {
         heading: 'Property Types Commonly Cleared Around Cookeville',
@@ -89,8 +89,8 @@ export const corePages: ServicePage[] = [
       'Forestry mulching uses a tracked machine with a drum mulching head to grind standing brush, saplings and small trees into mulch where they stand. Instead of push-piles, burn piles and hauling, the vegetation is processed in place and left as a ground cover.',
       'Around Cookeville and Putnam County, mulching is a popular fit for overgrown acreage, cedar encroachment, fence lines, trail corridors and properties where the owner wants the land opened up without stripping the topsoil.',
     ],
-    image: '/images/forestry-mulching.svg',
-    imageAlt: 'Illustration of a tracked forestry mulcher grinding brush into ground cover',
+    image: '/images/page-features/forestry-mulching.webp',
+    imageAlt: 'Tracked forestry mulcher processing brush and saplings',
     sections: [
       {
         heading: 'Where Forestry Mulching Works Well',
@@ -155,8 +155,8 @@ export const corePages: ServicePage[] = [
       'Left alone for even a few seasons, Middle Tennessee ground disappears under briars, honeysuckle, cedar seedlings and sapling thickets. Brush clearing knocks that growth back so a property can be seen, walked, mowed and put to use again.',
       'Around Cookeville, brush-clearing requests range from a fenceline gone wild to entire parcels that have not been touched in a decade.',
     ],
-    image: '/images/brush-clearing.svg',
-    imageAlt: 'Illustration of dense brush and sapling thickets being cleared from a rural parcel',
+    image: '/images/page-features/brush-clearing.webp',
+    imageAlt: 'Mulching machine clearing dense brush and saplings from a rural parcel',
     sections: [
       {
         heading: 'Common Brush-Clearing Situations',
@@ -215,8 +215,8 @@ export const corePages: ServicePage[] = [
       'Lot clearing prepares a specific building footprint — usually a residential or rural homesite — for what comes next: driveway access, utilities, foundation work and construction traffic. It is more surgical than large-acreage clearing and often happens close to property lines, existing homes and streets.',
       'With steady residential growth in Cookeville, Algood and the surrounding county, wooded infill lots and rural mini-tracts are some of the most common clearing requests in the area.',
     ],
-    image: '/images/building-site-preparation.svg',
-    imageAlt: 'Illustration of a cleared building pad on a partially wooded lot',
+    image: '/images/page-features/lot-clearing.webp',
+    imageAlt: 'Rural wooded lot cleared and prepared for future construction',
     sections: [
       {
         heading: 'What Lot Clearing Typically Covers',
@@ -275,8 +275,8 @@ export const corePages: ServicePage[] = [
       'Clearing gets the vegetation off the land; excavation and grading turn that land into usable, buildable ground. Site-preparation requests across the Upper Cumberland often bundle both — clear the footprint, then cut, fill, and shape it for a pad, driveway or drainage plan.',
       'This page covers the earthwork side of a property project and how to request it alongside or after clearing.',
     ],
-    image: '/images/grading-site-prep.svg',
-    imageAlt: 'Illustration of graded building pad and driveway on cleared rural ground',
+    image: '/images/page-features/grading-site-prep.webp',
+    imageAlt: 'Excavator grading a rural construction site after land clearing',
     sections: [
       {
         heading: 'Common Site-Preparation Requests',

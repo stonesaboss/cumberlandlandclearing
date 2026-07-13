@@ -13,8 +13,8 @@ export const locationPages: ServicePage[] = [
       'Crossville sits on top of the Cumberland Plateau, and clearing work there reflects it: larger wooded tracts, sandstone near the surface, rolling and sometimes rocky ground, and a steady market of buyers opening up recreational and retirement acreage.',
       'Land-clearing requests from Cumberland County tend to run bigger and woodier than valley work — full parcels being opened for the first time rather than single lots.',
     ],
-    image: '/images/overgrown-acreage.svg',
-    imageAlt: 'Illustration of large wooded acreage typical of the Cumberland Plateau',
+    image: '/images/page-features/overgrown-acreage.webp',
+    imageAlt: 'Overgrown rural acreage with brush and young trees',
     sections: [
       {
         heading: 'Clearing Work Common Around Crossville',
@@ -72,8 +72,8 @@ export const locationPages: ServicePage[] = [
     intro: [
       'White County is working farm country — cattle ground along the Calfkiller River valley, hay fields, hollows running up toward the plateau edge, and family land that has been in production for generations. Clearing requests around Sparta lean agricultural: pasture recovery, fence lines, field edges and access.',
     ],
-    image: '/images/pasture-reclamation.svg',
-    imageAlt: 'Illustration of farm pasture with brush encroachment being cleared',
+    image: '/images/page-features/pasture-reclamation.webp',
+    imageAlt: 'Forestry equipment reclaiming an overgrown pasture edge',
     sections: [
       {
         heading: 'What Sparta-Area Owners Request Most',
@@ -132,8 +132,8 @@ export const locationPages: ServicePage[] = [
       'Livingston and Smithville anchor opposite corners of the Upper Cumberland — Overton County’s farm and forest ground to the north, and DeKalb County’s Center Hill Lake country to the west. This page covers both because clearing requests from these counties are reviewed and routed the same way, through the region-wide request process, rather than being served by separate thin pages that repeat each other.',
       'Contractor coverage in these outlying counties genuinely varies by project size and location, so requests here are matched case-by-case.',
     ],
-    image: '/images/trail-access.svg',
-    imageAlt: 'Illustration of rural wooded property with cleared access in the northern Upper Cumberland',
+    image: '/images/page-features/trail-access.webp',
+    imageAlt: 'Freshly cleared wooded trail through a forest',
     sections: [
       {
         heading: 'Around Livingston and Overton County',

@@ -13,8 +13,8 @@ export const acreagePages: ServicePage[] = [
       'Pasture that goes unmowed for a few seasons starts to disappear — cedar seedlings, blackberry, sumac and sapling regrowth move in from the fencerows until the field is more thicket than grass. Pasture reclamation reverses that process and returns the ground to grazing or hay production.',
       'Across the farms of Putnam, White, Overton, DeKalb and Cumberland counties, reclamation is one of the most requested acreage projects in the region.',
     ],
-    image: '/images/pasture-reclamation.svg',
-    imageAlt: 'Illustration of a field being reclaimed from encroaching brush and cedar',
+    image: '/images/page-features/pasture-reclamation.webp',
+    imageAlt: 'Forestry equipment reclaiming an overgrown pasture edge',
     sections: [
       {
         heading: 'Signs a Field Is Ready for Reclamation',
@@ -74,8 +74,8 @@ export const acreagePages: ServicePage[] = [
       'Fencerows are where overgrowth starts. Birds seed them, mowers can’t reach them, and within a few years a farm fence is buried under cedar, hackberry, briars and vines — pushing wire out of line and hiding damage until livestock finds it first.',
       'Fence-line clearing opens a clean corridor along boundaries so fencing can be inspected, repaired or replaced, and so property lines are visible again.',
     ],
-    image: '/images/fence-line-clearing.svg',
-    imageAlt: 'Illustration of a cleared corridor along a farm fence line',
+    image: '/images/page-features/fence-line-clearing.webp',
+    imageAlt: 'Land-clearing machine opening a fence line beside rural property',
     sections: [
       {
         heading: 'Why Fence Lines Get Cleared',
@@ -134,8 +134,8 @@ export const acreagePages: ServicePage[] = [
       'Large parcels are only as usable as their access. Trail clearing cuts corridors through wooded and overgrown ground so owners can actually reach the back of the property — on foot, by ATV or with a truck — for hunting, recreation, timber management or simply checking the land.',
       'On Upper Cumberland ridges and hollows, a well-routed trail also becomes the working access for every future project on the parcel.',
     ],
-    image: '/images/trail-access.svg',
-    imageAlt: 'Illustration of a cleared trail winding through wooded rural property',
+    image: '/images/page-features/trail-access.webp',
+    imageAlt: 'Freshly cleared wooded trail through a forest',
     sections: [
       {
         heading: 'Common Trail Projects',
@@ -194,8 +194,8 @@ export const acreagePages: ServicePage[] = [
       'Every pond project starts as a clearing project. Before an excavator shapes a basin and dam, the footprint has to be stripped of trees, brush, stumps and roots — organic material left in a dam or basin decays, settles and leaks.',
       'This page covers requesting the clearing and excavation side of a pond project on Upper Cumberland farms and rural acreage.',
     ],
-    image: '/images/pond-site-clearing.svg',
-    imageAlt: 'Illustration of a cleared pond site with water and open banks',
+    image: '/images/page-features/pond-site-clearing.webp',
+    imageAlt: 'Excavator preparing a pond site in a wooded clearing',
     sections: [
       {
         heading: 'What Pond-Site Preparation Involves',
@@ -260,8 +260,8 @@ export const acreagePages: ServicePage[] = [
     intro: [
       'Some projects only need vegetation knocked down; others need it gone — roots and all. Stump and tree clearing covers the heavier end of land clearing: felling and removing unwanted trees, pulling or grinding stumps, and grubbing root systems where the ground is headed for construction, pasture smoothing or pond work.',
     ],
-    image: '/images/stump-tree-clearing.svg',
-    imageAlt: 'Illustration of cleared ground with remaining stumps being removed',
+    image: '/images/page-features/stump-tree-clearing.webp',
+    imageAlt: 'Excavator lifting a large stump and root ball from cleared ground',
     sections: [
       {
         heading: 'When Stumps and Roots Have to Go',

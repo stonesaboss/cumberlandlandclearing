@@ -18,40 +18,40 @@ const services = [
     copy: 'Clear trees, brush and unwanted vegetation for property access, construction, farming, development or land improvement.',
     link: 'Land Clearing in Cookeville',
     href: '/land-clearing-cookeville-tn/',
-    img: '/images/wooded-lot-clearing.svg',
-    alt: 'Illustration of trees and brush being cleared from a wooded property',
+    img: '/images/service-cards/land-clearing.webp',
+    alt: 'Tracked land-clearing machine opening a wooded rural property',
   },
   {
     name: 'Forestry Mulching',
     copy: 'Reduce dense brush, saplings and unwanted vegetation into ground-level mulch with less hauling and fewer debris piles.',
     link: 'Forestry Mulching in Cookeville',
     href: '/forestry-mulching-cookeville-tn/',
-    img: '/images/forestry-mulching.svg',
-    alt: 'Illustration of a tracked forestry mulcher grinding brush into mulch',
+    img: '/images/service-cards/forestry-mulching.webp',
+    alt: 'Tracked forestry mulcher processing brush and saplings',
   },
   {
     name: 'Brush Clearing',
     copy: 'Reclaim overgrown property, improve visibility and create access through dense brush, vines, saplings and undergrowth.',
     link: 'Brush Clearing in Cookeville',
     href: '/brush-clearing-cookeville-tn/',
-    img: '/images/brush-clearing.svg',
-    alt: 'Illustration of dense brush being cleared from an overgrown parcel',
+    img: '/images/service-cards/brush-clearing.webp',
+    alt: 'Mulching machine clearing dense brush and saplings from a rural parcel',
   },
   {
     name: 'Lot Clearing',
     copy: 'Prepare residential and rural lots for building, utilities, access roads, property improvements or future use.',
     link: 'Lot Clearing in Cookeville',
     href: '/lot-clearing-cookeville-tn/',
-    img: '/images/building-site-preparation.svg',
-    alt: 'Illustration of a residential lot cleared for construction',
+    img: '/images/service-cards/lot-clearing.webp',
+    alt: 'Rural wooded lot cleared and prepared for future construction',
   },
   {
     name: 'Grading & Site Preparation',
     copy: 'Request clearing and related preparation for construction areas, driveways, drainage work and usable ground.',
     link: 'Excavation, Grading & Site Prep',
     href: '/excavation-grading-site-prep/',
-    img: '/images/grading-site-prep.svg',
-    alt: 'Illustration of a graded building pad and driveway on cleared ground',
+    img: '/images/service-cards/grading-site-prep.webp',
+    alt: 'Excavator grading a rural construction site after land clearing',
   },
 ];
 
@@ -127,14 +127,14 @@ const acreageServices = [
 ];
 
 const gallery = [
-  { label: 'Overgrown Acreage', img: '/images/overgrown-acreage.svg', alt: 'Illustration of rural acreage overtaken by dense brush and volunteer trees' },
-  { label: 'Forestry Mulching', img: '/images/forestry-mulching.svg', alt: 'Illustration of a tracked forestry mulcher clearing dense brush on rural acreage' },
-  { label: 'Wooded Lot Clearing', img: '/images/wooded-lot-clearing.svg', alt: 'Illustration of a wooded lot being cleared for use' },
-  { label: 'Pasture Reclamation', img: '/images/pasture-reclamation.svg', alt: 'Illustration of pasture ground being recovered from brush encroachment' },
-  { label: 'Fence-Line Clearing', img: '/images/fence-line-clearing.svg', alt: 'Illustration of a cleared corridor along a farm fence line' },
-  { label: 'Trail Access', img: '/images/trail-access.svg', alt: 'Illustration of a cleared access trail through wooded property' },
-  { label: 'Building-Site Preparation', img: '/images/building-site-preparation.svg', alt: 'Illustration of a cleared and prepared building site' },
-  { label: 'Pond-Site Clearing', img: '/images/pond-site-clearing.svg', alt: 'Illustration of a cleared pond site with open banks' },
+  { label: 'Overgrown Acreage', img: '/images/gallery/overgrown-acreage.webp', alt: 'Overgrown rural acreage with brush and young trees' },
+  { label: 'Forestry Mulching', img: '/images/gallery/forestry-mulching.webp', alt: 'Forestry mulching machine grinding brush along a wooded edge' },
+  { label: 'Wooded Lot Clearing', img: '/images/gallery/wooded-lot-clearing.webp', alt: 'Heavy equipment clearing a wooded lot for future use' },
+  { label: 'Pasture Reclamation', img: '/images/gallery/pasture-reclamation.webp', alt: 'Forestry equipment reclaiming an overgrown pasture edge' },
+  { label: 'Fence-Line Clearing', img: '/images/gallery/fence-line-clearing.webp', alt: 'Land-clearing machine opening a fence line beside rural property' },
+  { label: 'Trail Access', img: '/images/gallery/trail-access.webp', alt: 'Freshly cleared wooded trail through a forest' },
+  { label: 'Building-Site Preparation', img: '/images/gallery/building-site-preparation.webp', alt: 'Cleared building site in a forested rural property' },
+  { label: 'Pond-Site Clearing', img: '/images/gallery/pond-site-clearing.webp', alt: 'Excavator preparing a pond site in a wooded clearing' },
 ];
 
 const checklist = [
@@ -356,8 +356,8 @@ const schema = [faqSchema(homeFaqs)];
       <div class="section-heading">
         <h2>Common Land-Clearing Project Types</h2>
         <p>
-          Illustrations of typical project categories across the region. Verified contractor
-          photographs will replace these examples as they are supplied.
+          Representative images of typical project categories across the region — not photographs
+          of completed local jobs. Verified contractor photos will be added as they are supplied.
         </p>
       </div>
       <div class="gallery-grid">
@@ -413,7 +413,13 @@ const schema = [faqSchema(homeFaqs)];
   .hero-media {
     position: absolute;
     inset: 0;
-    background: url('/images/hero-forestry-mulcher.svg') center/cover no-repeat;
+    background: url('/images/hero/hero-forestry-mulcher.webp') center/cover no-repeat;
+  }
+  @media (max-width: 720px) {
+    .hero-media {
+      background-image: url('/images/hero/hero-forestry-mulcher-mobile.webp');
+      background-position: center;
+    }
   }
   .hero-media::after {
     content: '';

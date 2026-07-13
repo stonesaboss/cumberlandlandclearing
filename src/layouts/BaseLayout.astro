@@ -17,7 +17,7 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description, schema = [], noindex = false, ogImage = '/images/hero-forestry-mulcher.svg' } = Astro.props;
+const { title, description, schema = [], noindex = false, ogImage = '/images/hero/hero-forestry-mulcher.webp' } = Astro.props;
 
 const siteUrl = (Astro.site?.href ?? 'https://uppercumberlandlandclearing.com/').replace(/\/$/, '');
 const canonical = `${siteUrl}${Astro.url.pathname}`;
