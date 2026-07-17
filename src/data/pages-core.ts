@@ -5,7 +5,7 @@ export const corePages: ServicePage[] = [
     slug: 'land-clearing-cookeville-tn',
     metaTitle: 'Land Clearing in Cookeville, TN | Request a Project Review',
     metaDescription:
-      'Request land clearing in Cookeville and Putnam County, TN for wooded lots, rural acreage, pasture property and building sites. Describe the property and get connected with a local contractor.',
+      'Request land clearing in Cookeville and Putnam County, TN for wooded lots, acreage, pasture and building sites. Get connected with a local contractor.',
     h1: 'Land Clearing in Cookeville, TN',
     eyebrow: 'Putnam County Property Clearing',
     breadcrumbLabel: 'Land Clearing — Cookeville',
@@ -81,7 +81,7 @@ export const corePages: ServicePage[] = [
     slug: 'forestry-mulching-cookeville-tn',
     metaTitle: 'Forestry Mulching in Cookeville, TN | Brush & Sapling Mulching',
     metaDescription:
-      'Request forestry mulching in Cookeville and Putnam County, TN. Reduce dense brush, saplings and overgrowth to ground-level mulch on rural acreage, trails, fence lines and homesites.',
+      'Request forestry mulching in Cookeville and Putnam County, TN. Turn dense brush, saplings and overgrowth into mulch on acreage, trails and homesites.',
     h1: 'Forestry Mulching in Cookeville, TN',
     eyebrow: 'Single-Machine Vegetation Clearing',
     breadcrumbLabel: 'Forestry Mulching — Cookeville',
@@ -147,7 +147,7 @@ export const corePages: ServicePage[] = [
     slug: 'brush-clearing-cookeville-tn',
     metaTitle: 'Brush Clearing in Cookeville, TN | Overgrowth Removal Requests',
     metaDescription:
-      'Request brush clearing in Cookeville and Putnam County, TN. Reclaim overgrown property from dense brush, briars, vines, cedar and sapling thickets on lots, acreage and farms.',
+      'Request brush clearing in Cookeville and Putnam County, TN. Reclaim overgrown lots, acreage and farms from dense brush, briars, cedar and saplings.',
     h1: 'Brush Clearing in Cookeville, TN',
     eyebrow: 'Overgrowth & Undergrowth Removal',
     breadcrumbLabel: 'Brush Clearing — Cookeville',
@@ -207,7 +207,7 @@ export const corePages: ServicePage[] = [
     slug: 'lot-clearing-cookeville-tn',
     metaTitle: 'Lot Clearing in Cookeville, TN | Residential & Rural Lots',
     metaDescription:
-      'Request lot clearing in Cookeville, TN for residential construction, rural homesites, driveways and utilities. Describe the lot and get connected with a local land-clearing contractor.',
+      'Request lot clearing in Cookeville, TN for homesites, driveways and utilities. Describe the lot and get connected with a local clearing contractor.',
     h1: 'Lot Clearing in Cookeville, TN',
     eyebrow: 'Homesite & Building-Lot Preparation',
     breadcrumbLabel: 'Lot Clearing — Cookeville',
@@ -267,7 +267,7 @@ export const corePages: ServicePage[] = [
     slug: 'excavation-grading-site-prep',
     metaTitle: 'Excavation, Grading & Site Prep | Upper Cumberland TN',
     metaDescription:
-      'Request excavation, grading and construction-site preparation across Upper Cumberland, TN — building pads, driveways, drainage work and finished ground after land clearing.',
+      'Request excavation, grading and site preparation across Upper Cumberland, TN — building pads, driveways, drainage and finished ground after clearing.',
     h1: 'Excavation, Grading and Site Preparation',
     eyebrow: 'From Cleared Land to Buildable Ground',
     breadcrumbLabel: 'Excavation & Site Prep',

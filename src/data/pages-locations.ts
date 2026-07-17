@@ -5,7 +5,7 @@ export const locationPages: ServicePage[] = [
     slug: 'land-clearing-crossville-tn',
     metaTitle: 'Land Clearing in Crossville, TN | Cumberland County Acreage',
     metaDescription:
-      'Request land clearing and forestry mulching in Crossville and Cumberland County, TN — plateau acreage, wooded tracts, rolling and rocky ground, farms, trails and building sites.',
+      'Request land clearing and forestry mulching in Crossville and Cumberland County, TN — plateau acreage, wooded tracts, farms and building sites.',
     h1: 'Land Clearing in Crossville, TN',
     eyebrow: 'Cumberland County & the Plateau',
     breadcrumbLabel: 'Land Clearing — Crossville',
@@ -65,7 +65,7 @@ export const locationPages: ServicePage[] = [
     slug: 'land-clearing-sparta-tn',
     metaTitle: 'Land Clearing in Sparta, TN | White County Farms & Acreage',
     metaDescription:
-      'Request land clearing in Sparta and White County, TN — farm and pasture clearing, fence lines, overgrown acreage, access work and homesite preparation in the Calfkiller valley and beyond.',
+      'Request land clearing in Sparta and White County, TN — pasture clearing, fence lines, overgrown acreage, access and homesite prep on local farms.',
     h1: 'Land Clearing in Sparta, TN',
     eyebrow: 'White County Farm & Rural Property',
     breadcrumbLabel: 'Land Clearing — Sparta',
@@ -124,7 +124,7 @@ export const locationPages: ServicePage[] = [
     slug: 'land-clearing-livingston-smithville-tn',
     metaTitle: 'Land Clearing Near Livingston & Smithville, TN',
     metaDescription:
-      'Request land clearing near Livingston (Overton County) and Smithville (DeKalb County), TN — lake-area lots, rural acreage, farms and overgrown property across the northern and western Upper Cumberland.',
+      'Request land clearing near Livingston and Smithville, TN — lake-area lots, farms, acreage and overgrown property in Overton and DeKalb counties.',
     h1: 'Land Clearing Near Livingston and Smithville, TN',
     eyebrow: 'Overton & DeKalb County Coverage',
     breadcrumbLabel: 'Livingston & Smithville',

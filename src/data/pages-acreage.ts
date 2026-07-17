@@ -5,7 +5,7 @@ export const acreagePages: ServicePage[] = [
     slug: 'pasture-reclamation',
     metaTitle: 'Pasture Reclamation in Upper Cumberland | Pasture Clearing',
     metaDescription:
-      'Request pasture reclamation across Upper Cumberland, TN. Recover grazing and hay ground from cedar, brush, saplings and encroaching overgrowth on farms and rural acreage.',
+      'Request pasture reclamation across Upper Cumberland, TN. Recover grazing and hay ground from cedar, brush and saplings on farms and rural acreage.',
     h1: 'Pasture Reclamation in Upper Cumberland',
     eyebrow: 'Recover Usable Farm Ground',
     breadcrumbLabel: 'Pasture Reclamation',
@@ -66,7 +66,7 @@ export const acreagePages: ServicePage[] = [
     slug: 'fence-line-clearing',
     metaTitle: 'Fence-Line Clearing in Upper Cumberland | Boundary Clearing',
     metaDescription:
-      'Request fence-line clearing across Upper Cumberland, TN. Restore visibility and access along property boundaries, farm fencing and utility corridors overtaken by brush and trees.',
+      'Request fence-line clearing across Upper Cumberland, TN. Restore property boundaries, farm fencing and utility corridors overtaken by brush and trees.',
     h1: 'Fence-Line Clearing in Upper Cumberland',
     eyebrow: 'Boundaries, Fencerows & Corridors',
     breadcrumbLabel: 'Fence-Line Clearing',
@@ -126,7 +126,7 @@ export const acreagePages: ServicePage[] = [
     slug: 'trail-clearing',
     metaTitle: 'Trail & Access Clearing in Upper Cumberland TN',
     metaDescription:
-      'Request trail and access clearing across Upper Cumberland, TN — hunting access, recreation trails, ATV routes and interior roads through wooded acreage and rural property.',
+      'Request trail and access clearing across Upper Cumberland, TN — hunting access, ATV routes and trails through wooded acreage and rural property.',
     h1: 'Trail and Access Clearing in Upper Cumberland',
     eyebrow: 'Open Up the Back of the Property',
     breadcrumbLabel: 'Trail Clearing',
@@ -186,7 +186,7 @@ export const acreagePages: ServicePage[] = [
     slug: 'pond-excavation',
     metaTitle: 'Pond-Site Clearing & Excavation Requests | Upper Cumberland',
     metaDescription:
-      'Request pond-site clearing and excavation in Upper Cumberland, TN. Clear trees, brush and access around planned farm ponds and recreational ponds before dirt work begins.',
+      'Request pond-site clearing and excavation in Upper Cumberland, TN. Clear trees, brush and access around planned ponds before dirt work begins.',
     h1: 'Pond-Site Clearing and Excavation Requests',
     eyebrow: 'Before the Water Comes the Clearing',
     breadcrumbLabel: 'Pond-Site Clearing',
