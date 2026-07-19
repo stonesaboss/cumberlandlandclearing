@@ -1,0 +1,269 @@
+{
+  "updated": "2026-07-19",
+  "site": "cumberlandlandclearing.com",
+  "note": "Land-clearing guides (Phase 1+2), keyword-prioritized via Ahrefs. Rendered by data-driven route resources/guides/[slug].astro from src/data/guides.ts. Images use ResourceImageSlot status pending (fallback shown until OpenClaw generates the final asset from the subject brief). Remaining plannedGuides in resources.ts are for later batches.",
+  "publishedCount": 29,
+  "articles": [
+    {
+      "topic": "How Much Does Land Clearing Cost in Tennessee?",
+      "hub": "land-clearing-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/how-much-does-land-clearing-cost-in-tennessee/",
+      "image": "/images/resources/guide-how-much-does-land-clearing-cost-in-tennessee.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Affects Land-Clearing Cost Per Acre?",
+      "hub": "land-clearing-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/what-affects-land-clearing-cost-per-acre/",
+      "image": "/images/resources/guide-what-affects-land-clearing-cost-per-acre.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Forestry Mulching Cost Versus Traditional Clearing",
+      "hub": "land-clearing-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/forestry-mulching-cost-versus-traditional-clearing/",
+      "image": "/images/resources/guide-forestry-mulching-cost-versus-traditional-clearing.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Forestry Mulching Versus Traditional Land Clearing",
+      "hub": "clearing-methods",
+      "status": "in-repo",
+      "href": "/resources/guides/forestry-mulching-versus-traditional-land-clearing/",
+      "image": "/images/resources/guide-forestry-mulching-versus-traditional-land-clearing.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Stump Grinding Versus Stump Removal",
+      "hub": "clearing-methods",
+      "status": "in-repo",
+      "href": "/resources/guides/stump-grinding-versus-stump-removal/",
+      "image": "/images/resources/guide-stump-grinding-versus-stump-removal.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Is Grubbing?",
+      "hub": "clearing-methods",
+      "status": "in-repo",
+      "href": "/resources/guides/what-is-grubbing/",
+      "image": "/images/resources/guide-what-is-grubbing.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How to Clear Land Covered in Dense Brush",
+      "hub": "property-conditions",
+      "status": "in-repo",
+      "href": "/resources/guides/how-to-clear-land-covered-in-dense-brush/",
+      "image": "/images/resources/guide-how-to-clear-land-covered-in-dense-brush.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Rocky Ground Affects Land Clearing",
+      "hub": "property-conditions",
+      "status": "in-repo",
+      "href": "/resources/guides/how-rocky-ground-affects-land-clearing/",
+      "image": "/images/resources/guide-how-rocky-ground-affects-land-clearing.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How to Plan a Land-Clearing Project",
+      "hub": "project-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/how-to-plan-a-land-clearing-project/",
+      "image": "/images/resources/guide-how-to-plan-a-land-clearing-project.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Property Photos Should You Send for an Estimate?",
+      "hub": "project-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/what-property-photos-to-send-for-a-land-clearing-estimate/",
+      "image": "/images/resources/guide-what-property-photos-to-send-for-a-land-clearing-estimate.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Long Does Land Clearing Take?",
+      "hub": "project-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/how-long-does-land-clearing-take/",
+      "image": "/images/resources/guide-how-long-does-land-clearing-take.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Land Clearing for a New Home Site",
+      "hub": "site-preparation",
+      "status": "in-repo",
+      "href": "/resources/guides/land-clearing-for-a-new-home-site/",
+      "image": "/images/resources/guide-land-clearing-for-a-new-home-site.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How to Reclaim an Overgrown Pasture",
+      "hub": "rural-property-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/how-to-reclaim-an-overgrown-pasture/",
+      "image": "/images/resources/guide-how-to-reclaim-an-overgrown-pasture.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Land Clearing in the Upper Cumberland: Property Owner’s Guide",
+      "hub": "upper-cumberland-land-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/land-clearing-in-the-upper-cumberland-property-owners-guide/",
+      "image": "/images/resources/guide-land-clearing-in-the-upper-cumberland-property-owners-guide.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Terrain Affects Land-Clearing Cost",
+      "hub": "land-clearing-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/how-terrain-affects-land-clearing-cost/",
+      "image": "/images/resources/guide-how-terrain-affects-land-clearing-cost.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Does Land-Clearing Pricing Include Debris Removal?",
+      "hub": "land-clearing-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/does-land-clearing-pricing-include-debris-removal/",
+      "image": "/images/resources/guide-does-land-clearing-pricing-include-debris-removal.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why Small Projects May Cost More Per Acre",
+      "hub": "land-clearing-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/why-small-projects-cost-more-per-acre/",
+      "image": "/images/resources/guide-why-small-projects-cost-more-per-acre.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Brush Cutting Versus Forestry Mulching",
+      "hub": "clearing-methods",
+      "status": "in-repo",
+      "href": "/resources/guides/brush-cutting-versus-forestry-mulching/",
+      "image": "/images/resources/guide-brush-cutting-versus-forestry-mulching.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Is Selective Land Clearing?",
+      "hub": "clearing-methods",
+      "status": "in-repo",
+      "href": "/resources/guides/what-is-selective-land-clearing/",
+      "image": "/images/resources/guide-what-is-selective-land-clearing.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Happens to Trees and Brush After Clearing?",
+      "hub": "clearing-methods",
+      "status": "in-repo",
+      "href": "/resources/guides/what-happens-to-trees-and-brush-after-clearing/",
+      "image": "/images/resources/guide-what-happens-to-trees-and-brush-after-clearing.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Can Forestry Mulching Be Used on Steep Land?",
+      "hub": "property-conditions",
+      "status": "in-repo",
+      "href": "/resources/guides/can-forestry-mulching-be-used-on-steep-land/",
+      "image": "/images/resources/guide-can-forestry-mulching-be-used-on-steep-land.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Clearing Property With Limited Equipment Access",
+      "hub": "property-conditions",
+      "status": "in-repo",
+      "href": "/resources/guides/clearing-property-with-limited-equipment-access/",
+      "image": "/images/resources/guide-clearing-property-with-limited-equipment-access.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Time of Year Is Best for Land Clearing?",
+      "hub": "project-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/what-time-of-year-is-best-for-land-clearing/",
+      "image": "/images/resources/guide-what-time-of-year-is-best-for-land-clearing.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Underground Utilities Must Be Marked?",
+      "hub": "project-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/what-underground-utilities-must-be-marked/",
+      "image": "/images/resources/guide-what-underground-utilities-must-be-marked.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Clearing Versus Grading",
+      "hub": "site-preparation",
+      "status": "in-repo",
+      "href": "/resources/guides/clearing-versus-grading/",
+      "image": "/images/resources/guide-clearing-versus-grading.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Clearing Land for a Driveway",
+      "hub": "site-preparation",
+      "status": "in-repo",
+      "href": "/resources/guides/clearing-land-for-a-driveway/",
+      "image": "/images/resources/guide-clearing-land-for-a-driveway.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Preparing Rural Land for Septic Installation",
+      "hub": "site-preparation",
+      "status": "in-repo",
+      "href": "/resources/guides/preparing-rural-land-for-septic-installation/",
+      "image": "/images/resources/guide-preparing-rural-land-for-septic-installation.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How to Clear a Fence Line",
+      "hub": "rural-property-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/how-to-clear-a-fence-line/",
+      "image": "/images/resources/guide-how-to-clear-a-fence-line.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Questions to Ask Before Buying Overgrown Land",
+      "hub": "upper-cumberland-land-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/questions-to-ask-before-buying-overgrown-land/",
+      "image": "/images/resources/guide-questions-to-ask-before-buying-overgrown-land.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    }
+  ]
+}
