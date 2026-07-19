@@ -1,8 +1,8 @@
 {
   "updated": "2026-07-19",
   "site": "cumberlandlandclearing.com",
-  "note": "Land-clearing guides (Phase 1+2), keyword-prioritized via Ahrefs. Rendered by data-driven route resources/guides/[slug].astro from src/data/guides.ts. Images use ResourceImageSlot status pending (fallback shown until OpenClaw generates the final asset from the subject brief). Remaining plannedGuides in resources.ts are for later batches.",
-  "publishedCount": 29,
+  "note": "COMPLETE land-clearing knowledge catalog (64 guides, all hubs). Keyword-prioritized via Ahrefs. Rendered by data-driven route resources/guides/[slug].astro from src/data/guides.ts. Images use ResourceImageSlot status pending (fallback shown until OpenClaw generates the final asset from the subject brief in guides.ts). All plannedGuides in resources.ts are now published.",
+  "publishedCount": 64,
   "articles": [
     {
       "topic": "How Much Does Land Clearing Cost in Tennessee?",
@@ -262,6 +262,321 @@
       "status": "in-repo",
       "href": "/resources/guides/questions-to-ask-before-buying-overgrown-land/",
       "image": "/images/resources/guide-questions-to-ask-before-buying-overgrown-land.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Equipment Access Affects an Estimate",
+      "hub": "land-clearing-costs",
+      "status": "in-repo",
+      "href": "/resources/guides/how-equipment-access-affects-an-estimate/",
+      "image": "/images/resources/guide-how-equipment-access-affects-an-estimate.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Can Land Be Cleared Without Removing Every Tree?",
+      "hub": "clearing-methods",
+      "status": "in-repo",
+      "href": "/resources/guides/can-land-be-cleared-without-removing-every-tree/",
+      "image": "/images/resources/guide-can-land-be-cleared-without-removing-every-tree.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "When Does Cleared Material Need to Be Hauled Away?",
+      "hub": "clearing-methods",
+      "status": "in-repo",
+      "href": "/resources/guides/when-does-cleared-material-need-to-be-hauled-away/",
+      "image": "/images/resources/guide-when-does-cleared-material-need-to-be-hauled-away.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Reclaiming Property Overgrown With Saplings",
+      "hub": "property-conditions",
+      "status": "in-repo",
+      "href": "/resources/guides/reclaiming-property-overgrown-with-saplings/",
+      "image": "/images/resources/guide-reclaiming-property-overgrown-with-saplings.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Wet Ground Affects Heavy Equipment",
+      "hub": "property-conditions",
+      "status": "in-repo",
+      "href": "/resources/guides/how-wet-ground-affects-heavy-equipment/",
+      "image": "/images/resources/guide-how-wet-ground-affects-heavy-equipment.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Can Land Clearing Be Done After Heavy Rain?",
+      "hub": "property-conditions",
+      "status": "in-repo",
+      "href": "/resources/guides/can-land-clearing-be-done-after-heavy-rain/",
+      "image": "/images/resources/guide-can-land-clearing-be-done-after-heavy-rain.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Clearing Around Desirable Mature Trees",
+      "hub": "property-conditions",
+      "status": "in-repo",
+      "href": "/resources/guides/clearing-around-desirable-mature-trees/",
+      "image": "/images/resources/guide-clearing-around-desirable-mature-trees.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What to Do Before Clearing Your Property",
+      "hub": "project-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/what-to-do-before-clearing-your-property/",
+      "image": "/images/resources/guide-what-to-do-before-clearing-your-property.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How to Mark the Area You Want Cleared",
+      "hub": "project-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/how-to-mark-the-area-you-want-cleared/",
+      "image": "/images/resources/guide-how-to-mark-the-area-you-want-cleared.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Should You Get a Survey Before Land Clearing?",
+      "hub": "project-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/should-you-get-a-survey-before-land-clearing/",
+      "image": "/images/resources/guide-should-you-get-a-survey-before-land-clearing.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How to Identify Property Lines Before Clearing",
+      "hub": "project-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/how-to-identify-property-lines-before-clearing/",
+      "image": "/images/resources/guide-how-to-identify-property-lines-before-clearing.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Information Contractors Need",
+      "hub": "project-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/what-information-contractors-need/",
+      "image": "/images/resources/guide-what-information-contractors-need.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How to Prepare Gates and Entrances for Equipment",
+      "hub": "project-planning",
+      "status": "in-repo",
+      "href": "/resources/guides/how-to-prepare-gates-and-entrances-for-equipment/",
+      "image": "/images/resources/guide-how-to-prepare-gates-and-entrances-for-equipment.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Preparing Land for a Cabin, Barn or Workshop",
+      "hub": "site-preparation",
+      "status": "in-repo",
+      "href": "/resources/guides/preparing-land-for-a-cabin-barn-or-workshop/",
+      "image": "/images/resources/guide-preparing-land-for-a-cabin-barn-or-workshop.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Why Stumps and Roots Must Be Removed From Building Areas",
+      "hub": "site-preparation",
+      "status": "in-repo",
+      "href": "/resources/guides/why-stumps-and-roots-must-be-removed-from-building-areas/",
+      "image": "/images/resources/guide-why-stumps-and-roots-must-be-removed-from-building-areas.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Is a Building Pad?",
+      "hub": "site-preparation",
+      "status": "in-repo",
+      "href": "/resources/guides/what-is-a-building-pad/",
+      "image": "/images/resources/guide-what-is-a-building-pad.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Drainage Should Be Considered Before Grading",
+      "hub": "site-preparation",
+      "status": "in-repo",
+      "href": "/resources/guides/how-drainage-should-be-considered-before-grading/",
+      "image": "/images/resources/guide-how-drainage-should-be-considered-before-grading.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "What Should Happen After a Lot Is Cleared?",
+      "hub": "site-preparation",
+      "status": "in-repo",
+      "href": "/resources/guides/what-should-happen-after-a-lot-is-cleared/",
+      "image": "/images/resources/guide-what-should-happen-after-a-lot-is-cleared.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "When Does a Site Need Erosion Control?",
+      "hub": "site-preparation",
+      "status": "in-repo",
+      "href": "/resources/guides/when-does-a-site-need-erosion-control/",
+      "image": "/images/resources/guide-when-does-a-site-need-erosion-control.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "How Wide Should a Cleared Fence Line Be?",
+      "hub": "rural-property-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/how-wide-should-a-cleared-fence-line-be/",
+      "image": "/images/resources/guide-how-wide-should-a-cleared-fence-line-be.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Creating Access Trails Through Wooded Property",
+      "hub": "rural-property-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/creating-access-trails-through-wooded-property/",
+      "image": "/images/resources/guide-creating-access-trails-through-wooded-property.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Clearing Trails for Hunting and Recreation",
+      "hub": "rural-property-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/clearing-trails-for-hunting-and-recreation/",
+      "image": "/images/resources/guide-clearing-trails-for-hunting-and-recreation.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Clearing Around a Farm Pond",
+      "hub": "rural-property-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/clearing-around-a-farm-pond/",
+      "image": "/images/resources/guide-clearing-around-a-farm-pond.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Preparing a Site for a New Pond",
+      "hub": "rural-property-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/preparing-a-site-for-a-new-pond/",
+      "image": "/images/resources/guide-preparing-a-site-for-a-new-pond.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Improving Access to Rural Acreage",
+      "hub": "rural-property-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/improving-access-to-rural-acreage/",
+      "image": "/images/resources/guide-improving-access-to-rural-acreage.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Maintaining Land After Forestry Mulching",
+      "hub": "rural-property-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/maintaining-land-after-forestry-mulching/",
+      "image": "/images/resources/guide-maintaining-land-after-forestry-mulching.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Reopening an Abandoned Farm Road",
+      "hub": "rural-property-projects",
+      "status": "in-repo",
+      "href": "/resources/guides/reopening-an-abandoned-farm-road/",
+      "image": "/images/resources/guide-reopening-an-abandoned-farm-road.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Common Land-Clearing Conditions Around Cookeville",
+      "hub": "upper-cumberland-land-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/common-land-clearing-conditions-around-cookeville/",
+      "image": "/images/resources/guide-common-land-clearing-conditions-around-cookeville.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Land-Clearing Considerations on the Cumberland Plateau",
+      "hub": "upper-cumberland-land-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/land-clearing-considerations-on-the-cumberland-plateau/",
+      "image": "/images/resources/guide-land-clearing-considerations-on-the-cumberland-plateau.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Clearing Sloped Tennessee Property",
+      "hub": "upper-cumberland-land-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/clearing-sloped-tennessee-property/",
+      "image": "/images/resources/guide-clearing-sloped-tennessee-property.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Cedar and Brush Encroachment on Pastureland",
+      "hub": "upper-cumberland-land-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/cedar-and-brush-encroachment-on-pastureland/",
+      "image": "/images/resources/guide-cedar-and-brush-encroachment-on-pastureland.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Rocky Ground and Land Preparation",
+      "hub": "upper-cumberland-land-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/rocky-ground-and-land-preparation/",
+      "image": "/images/resources/guide-rocky-ground-and-land-preparation.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Seasonal Ground Conditions for Land Clearing",
+      "hub": "upper-cumberland-land-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/seasonal-ground-conditions-for-land-clearing/",
+      "image": "/images/resources/guide-seasonal-ground-conditions-for-land-clearing.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Rural Equipment Access in the Upper Cumberland",
+      "hub": "upper-cumberland-land-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/rural-equipment-access-in-the-upper-cumberland/",
+      "image": "/images/resources/guide-rural-equipment-access-in-the-upper-cumberland.webp",
+      "imageStatus": "pending-fallback-shown",
+      "published": false
+    },
+    {
+      "topic": "Estimating the Usable Acreage of an Overgrown Parcel",
+      "hub": "upper-cumberland-land-guide",
+      "status": "in-repo",
+      "href": "/resources/guides/estimating-the-usable-acreage-of-an-overgrown-parcel/",
+      "image": "/images/resources/guide-estimating-the-usable-acreage-of-an-overgrown-parcel.webp",
       "imageStatus": "pending-fallback-shown",
       "published": false
     }
