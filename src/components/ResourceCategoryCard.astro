@@ -1,0 +1,42 @@
+---
+/** Category card on the Resource Center landing page linking to a hub. */
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+}
+const { title, description, href } = Astro.props;
+---
+
+<a class="card category-card" href={href}>
+  <h2>{title}</h2>
+  <p>{description}</p>
+  <span class="category-more" aria-hidden="true">Explore this section →</span>
+</a>
+
+<style>
+  .category-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem 1.4rem;
+    text-decoration: none;
+    height: 100%;
+  }
+  .category-card h2 {
+    font-size: 1.1rem;
+    color: var(--green-deep);
+    margin-bottom: 0.4rem;
+  }
+  .category-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0 0 0.8rem;
+    flex-grow: 1;
+  }
+  .category-more {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--orange-dark);
+  }
+  .category-card:hover .category-more { text-decoration: underline; }
+</style>

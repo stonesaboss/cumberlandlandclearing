@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ResourcePageHeader from '../../components/ResourcePageHeader.astro';
+import ResourceFeatureImage from '../../components/ResourceFeatureImage.astro';
+import ResourceCategoryCard from '../../components/ResourceCategoryCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { RESOURCES_INDEX, sortedHubs, resolveImage } from '../../data/resources';
+import { breadcrumbSchema } from '../../lib/schema';
+
+const siteUrl = (Astro.site?.href ?? '').replace(/\/$/, '');
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Land Clearing Resources', href: '/resources/' },
+];
+---
+
+<BaseLayout
+  title={RESOURCES_INDEX.metaTitle}
+  description={RESOURCES_INDEX.metaDescription}
+  schema={[breadcrumbSchema(siteUrl, crumbs)]}
+  ogImage={resolveImage(RESOURCES_INDEX.image)}
+>
+  <Breadcrumbs crumbs={crumbs} />
+  <ResourcePageHeader eyebrow="Land Clearing Resources" h1={RESOURCES_INDEX.h1} />
+
+  <div class="container resources-body section">
+    <ResourceFeatureImage image={RESOURCES_INDEX.image} loading="eager" />
+
+    {RESOURCES_INDEX.intro.map((para) => (
+      <p class="lead-para">{para}</p>
+    ))}
+
+    <div class="category-grid">
+      {sortedHubs.map((hub) => (
+        <ResourceCategoryCard
+          title={hub.cardTitle}
+          description={hub.cardDescription}
+          href={`/resources/${hub.slug}/`}
+        />
+      ))}
+    </div>
+
+    <section class="start-planning">
+      <h2>Start Planning Your Project</h2>
+      <p>
+        When you're ready to move from reading to doing, the fastest path is a project review:
+        describe the property, the vegetation and how you plan to use the land, and add wide
+        photos of the ground and the entrance.
+      </p>
+      <ul class="planning-links">
+        <li>
+          <a href="/request-estimate/">Request a land-clearing project review</a> — the structured
+          form that collects what contractors need to evaluate a property.
+        </li>
+        <li>
+          <a href="/land-clearing-cookeville-tn/">Land clearing in Cookeville and Putnam County</a>
+          — the region's most requested full-scope clearing service.
+        </li>
+        <li>
+          <a href="/forestry-mulching-cookeville-tn/">Forestry mulching in Cookeville</a> — the
+          single-machine option for brush, saplings and overgrown acreage.
+        </li>
+        <li>
+          <a href="/service-area/">Upper Cumberland service area</a> — where project requests are
+          reviewed across the region.
+        </li>
+        <li>
+          <a href="/#faqs">Frequently asked land-clearing questions</a> — quick answers on cost
+          factors, methods, permits and timelines.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <CtaBand
+    heading="Planning Work on Your Property?"
+    copy="Send the property location, approximate acreage, vegetation conditions, equipment-access details and several wide-angle photos for a project review."
+    primaryLabel="Submit Property Details"
+  />
+</BaseLayout>
+
+<style>
+  .resources-body { max-width: 1000px; }
+  .lead-para { font-size: 1.08rem; }
+  .resources-body :global(.resource-feature) { margin-bottom: 1.5rem; }
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-block: 2rem 2.5rem;
+  }
+  .start-planning h2 { margin-bottom: 0.5rem; }
+  .planning-links { padding-left: 1.3em; }
+  .planning-links li { margin-bottom: 0.6rem; }
+  .planning-links a { font-weight: 600; }
+</style>

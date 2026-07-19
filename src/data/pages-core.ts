@@ -76,6 +76,11 @@ export const corePages: ServicePage[] = [
     ],
     serviceType: 'Land clearing',
     areaServed: ['Cookeville TN', 'Putnam County TN', 'Algood TN', 'Baxter TN', 'Monterey TN'],
+    resources: [
+      { label: 'What Affects Land-Clearing Costs and Estimates', href: '/resources/land-clearing-costs/' },
+      { label: 'Land-Clearing Methods Compared', href: '/resources/clearing-methods/' },
+      { label: 'Planning a Land-Clearing Project', href: '/resources/project-planning/' },
+    ],
   },
   {
     slug: 'forestry-mulching-cookeville-tn',
@@ -142,6 +147,11 @@ export const corePages: ServicePage[] = [
     ],
     serviceType: 'Forestry mulching',
     areaServed: ['Cookeville TN', 'Putnam County TN', 'Upper Cumberland TN'],
+    resources: [
+      { label: 'What Affects Land-Clearing Costs and Estimates', href: '/resources/land-clearing-costs/' },
+      { label: 'Land-Clearing Methods Compared', href: '/resources/clearing-methods/' },
+      { label: 'Property Conditions That Affect Clearing', href: '/resources/property-conditions/' },
+    ],
   },
   {
     slug: 'brush-clearing-cookeville-tn',
@@ -202,6 +212,10 @@ export const corePages: ServicePage[] = [
     ],
     serviceType: 'Brush clearing',
     areaServed: ['Cookeville TN', 'Putnam County TN', 'Upper Cumberland TN'],
+    resources: [
+      { label: 'Land-Clearing Methods Compared', href: '/resources/clearing-methods/' },
+      { label: 'Property Conditions That Affect Clearing', href: '/resources/property-conditions/' },
+    ],
   },
   {
     slug: 'lot-clearing-cookeville-tn',
@@ -326,5 +340,9 @@ export const corePages: ServicePage[] = [
     ],
     serviceType: 'Excavation and grading',
     areaServed: ['Upper Cumberland TN', 'Cookeville TN', 'Crossville TN'],
+    resources: [
+      { label: 'Construction and Site Preparation', href: '/resources/site-preparation/' },
+      { label: 'Planning a Land-Clearing Project', href: '/resources/project-planning/' },
+    ],
   },
 ];

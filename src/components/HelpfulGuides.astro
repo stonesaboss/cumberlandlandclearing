@@ -1,0 +1,28 @@
+---
+import type { RelatedLink } from '../data/types';
+
+/** Compact resource-hub links block for commercial service pages. */
+interface Props {
+  links: RelatedLink[];
+  heading?: string;
+}
+const { links, heading = 'Helpful Guides' } = Astro.props;
+---
+
+<section class="content-section helpful-guides">
+  <h2>{heading}</h2>
+  <ul>
+    {links.map((l) => (
+      <li><a href={l.href}>{l.label}</a></li>
+    ))}
+    <li class="hg-index"><a href="/resources/">Browse all land-clearing resources</a></li>
+  </ul>
+</section>
+
+<style>
+  .helpful-guides { margin-top: 1.75rem; }
+  .helpful-guides ul { list-style: none; padding: 0; margin: 0; }
+  .helpful-guides li { margin-bottom: 0.4rem; }
+  .helpful-guides a { font-weight: 600; }
+  .hg-index a { font-weight: 400; font-size: 0.92rem; }
+</style>

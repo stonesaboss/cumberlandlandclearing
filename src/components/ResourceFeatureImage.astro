@@ -1,0 +1,36 @@
+---
+import { resolveImage, type ResourceImageSlot } from '../data/resources';
+
+/**
+ * Aspect-locked feature image for Resource Center pages.
+ * Renders the final asset when installed (status: 'available'), otherwise an
+ * existing site image as the interim visual — never a broken reference.
+ */
+interface Props {
+  image: ResourceImageSlot;
+  loading?: 'eager' | 'lazy';
+}
+const { image, loading = 'lazy' } = Astro.props;
+const src = resolveImage(image);
+---
+
+<img
+  class="resource-feature"
+  src={src}
+  alt={image.alt}
+  width="1200"
+  height="800"
+  loading={loading}
+  decoding="async"
+/>
+
+<style>
+  .resource-feature {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+  }
+</style>

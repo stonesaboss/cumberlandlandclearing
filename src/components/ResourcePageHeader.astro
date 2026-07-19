@@ -1,0 +1,32 @@
+---
+/** Green page-header band for Resource Center pages, matching the service-page hero. */
+interface Props {
+  eyebrow: string;
+  h1: string;
+}
+const { eyebrow, h1 } = Astro.props;
+---
+
+<section class="resource-hero">
+  <div class="container">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{h1}</h1>
+  </div>
+</section>
+
+<style>
+  .resource-hero {
+    background: var(--green-deep);
+    color: var(--white);
+    padding-block: clamp(2rem, 5vw, 3.5rem);
+  }
+  .resource-hero h1 { color: var(--white); margin: 0; }
+  .eyebrow {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: var(--orange);
+    margin-bottom: 0.4rem;
+  }
+</style>

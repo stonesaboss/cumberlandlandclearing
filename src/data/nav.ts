@@ -45,7 +45,18 @@ export const NAV: NavItem[] = [
       { label: 'View All Service Areas', href: '/service-area/' },
     ],
   },
-  { label: 'FAQs', href: '/#faqs' },
+  {
+    label: 'Land Clearing Resources',
+    href: '/resources/',
+    children: [
+      { label: 'Knowledge Center', href: '/resources/' },
+      { label: 'Clearing Cost Guides', href: '/resources/land-clearing-costs/' },
+      { label: 'Clearing Methods', href: '/resources/clearing-methods/' },
+      { label: 'Project Planning', href: '/resources/project-planning/' },
+      { label: 'Site Preparation', href: '/resources/site-preparation/' },
+      { label: 'FAQs', href: '/#faqs' },
+    ],
+  },
 ];
 
 export const FOOTER_SERVICES: NavLink[] = [

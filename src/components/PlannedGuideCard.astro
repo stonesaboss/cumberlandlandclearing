@@ -1,0 +1,67 @@
+---
+/**
+ * Card for a guide in a resource hub. Published guides (href set) render as
+ * links; unpublished guides render as non-interactive cards with a subtle
+ * "Coming Soon" label — never an empty anchor or a link to a missing route.
+ */
+interface Props {
+  title: string;
+  description?: string;
+  href?: string;
+}
+const { title, description, href } = Astro.props;
+---
+
+{href ? (
+  <a class="card guide-card" href={href}>
+    <h3>{title}</h3>
+    {description && <p>{description}</p>}
+    <span class="guide-more" aria-hidden="true">Read the guide →</span>
+  </a>
+) : (
+  <div class="card guide-card guide-card--planned">
+    <h3>{title}</h3>
+    {description && <p>{description}</p>}
+    <span class="guide-status">Coming Soon</span>
+  </div>
+)}
+
+<style>
+  .guide-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+    height: 100%;
+  }
+  .guide-card h3 {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin: 0;
+  }
+  .guide-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+  .guide-more { font-weight: 600; font-size: 0.85rem; color: var(--orange-dark); margin-top: auto; }
+  .guide-card--planned {
+    background: var(--cream);
+    border-style: dashed;
+  }
+  .guide-card--planned:hover { transform: none; box-shadow: var(--shadow-sm); }
+  .guide-card--planned h3 { color: var(--text-muted); }
+  .guide-status {
+    align-self: flex-start;
+    margin-top: auto;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--olive);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+    background: var(--white);
+  }
+</style>

@@ -61,6 +61,10 @@ export const acreagePages: ServicePage[] = [
     ],
     serviceType: 'Pasture reclamation',
     areaServed: ['Upper Cumberland TN', 'Putnam County TN', 'White County TN', 'Overton County TN'],
+    resources: [
+      { label: 'Rural Property Clearing Projects', href: '/resources/rural-property-projects/' },
+      { label: 'Property Conditions That Affect Clearing', href: '/resources/property-conditions/' },
+    ],
   },
   {
     slug: 'fence-line-clearing',
@@ -121,6 +125,9 @@ export const acreagePages: ServicePage[] = [
     ],
     serviceType: 'Fence-line clearing',
     areaServed: ['Upper Cumberland TN'],
+    resources: [
+      { label: 'Rural Property Clearing Projects', href: '/resources/rural-property-projects/' },
+    ],
   },
   {
     slug: 'trail-clearing',
@@ -181,6 +188,9 @@ export const acreagePages: ServicePage[] = [
     ],
     serviceType: 'Trail and access clearing',
     areaServed: ['Upper Cumberland TN'],
+    resources: [
+      { label: 'Rural Property Clearing Projects', href: '/resources/rural-property-projects/' },
+    ],
   },
   {
     slug: 'pond-excavation',
@@ -248,6 +258,10 @@ export const acreagePages: ServicePage[] = [
     ],
     serviceType: 'Pond-site clearing and excavation',
     areaServed: ['Upper Cumberland TN'],
+    resources: [
+      { label: 'Rural Property Clearing Projects', href: '/resources/rural-property-projects/' },
+      { label: 'Construction and Site Preparation', href: '/resources/site-preparation/' },
+    ],
   },
   {
     slug: 'stump-and-tree-clearing',
@@ -307,5 +321,9 @@ export const acreagePages: ServicePage[] = [
     ],
     serviceType: 'Stump and tree clearing',
     areaServed: ['Upper Cumberland TN'],
+    resources: [
+      { label: 'Land-Clearing Methods Compared', href: '/resources/clearing-methods/' },
+      { label: 'Construction and Site Preparation', href: '/resources/site-preparation/' },
+    ],
   },
 ];

@@ -111,6 +111,14 @@ All in [`src/config.ts`](src/config.ts) unless noted:
   instead (see `land-clearing-livingston-smithville-tn`).
 - **Homepage FAQs**: `src/data/faqs.ts` (FAQPage schema is emitted only where FAQs are visible).
 - **Form options**: `src/data/form-options.ts` — mirror any changes in `functions/api/lead.ts`.
+- **Resource Center** (`/resources/` + seven hubs): all content lives in
+  [`src/data/resources.ts`](src/data/resources.ts), rendered by
+  `src/pages/resources/index.astro` and `src/pages/resources/[slug].astro`.
+  To publish a future article: create its page under `src/pages/resources/`,
+  then add an `href` to the matching `plannedGuides` entry — its card switches
+  from "Coming Soon" to a link automatically. Hub feature images are pending;
+  see [`docs/resource-images.md`](docs/resource-images.md) for the asset
+  manifest and installation steps.
 - **Sitemap** regenerates on every build (`@astrojs/sitemap`); no manual step.
 
 ## Quality checks

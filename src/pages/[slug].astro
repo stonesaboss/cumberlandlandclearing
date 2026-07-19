@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import FaqAccordion from '../components/FaqAccordion.astro';
+import HelpfulGuides from '../components/HelpfulGuides.astro';
 import CtaBand from '../components/CtaBand.astro';
 import LeadForm from '../components/LeadForm.astro';
 import { allServicePages } from '../data/pages';
@@ -74,6 +75,8 @@ const schema = [
           )}
         </ul>
       </section>
+
+      {page.resources && page.resources.length > 0 && <HelpfulGuides links={page.resources} />}
     </article>
 
     <aside class="page-sidebar">

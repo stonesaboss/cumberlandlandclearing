@@ -31,4 +31,6 @@ export interface ServicePage {
   serviceType: string;
   areaServed: string[];
   breadcrumbLabel: string;
+  /** Resource-hub links rendered as a compact "Helpful Guides" block. */
+  resources?: RelatedLink[];
 }

@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ResourcePageHeader from '../../components/ResourcePageHeader.astro';
+import ResourceFeatureImage from '../../components/ResourceFeatureImage.astro';
+import PlannedGuideCard from '../../components/PlannedGuideCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { sortedHubs, resolveImage, type ResourceHub } from '../../data/resources';
+import { breadcrumbSchema } from '../../lib/schema';
+
+export function getStaticPaths() {
+  return sortedHubs.map((hub) => ({ params: { slug: hub.slug }, props: { hub } }));
+}
+
+interface Props {
+  hub: ResourceHub;
+}
+const { hub } = Astro.props;
+const siteUrl = (Astro.site?.href ?? '').replace(/\/$/, '');
+
+const crumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Land Clearing Resources', href: '/resources/' },
+  { label: hub.h1, href: `/resources/${hub.slug}/` },
+];
+
+const publishedCount = hub.plannedGuides.filter((g) => g.href).length;
+---
+
+<BaseLayout
+  title={hub.metaTitle}
+  description={hub.metaDescription}
+  schema={[breadcrumbSchema(siteUrl, crumbs)]}
+  ogImage={resolveImage(hub.image)}
+>
+  <Breadcrumbs crumbs={crumbs} />
+  <ResourcePageHeader eyebrow="Land Clearing Resources" h1={hub.h1} />
+
+  <div class="container hub-body section">
+    <ResourceFeatureImage image={hub.image} loading="eager" />
+
+    {hub.intro.map((para) => (
+      <p class="lead-para">{para}</p>
+    ))}
+
+    <section class="hub-section">
+      <h2>{hub.factors.heading}</h2>
+      <ul class="factor-list">
+        {hub.factors.items.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="hub-section">
+      <h2>Guides in This Section</h2>
+      {publishedCount === 0 && (
+        <p class="guides-note">
+          These guides are being developed now and will be published here as they are completed.
+        </p>
+      )}
+      <div class="guide-grid">
+        {hub.plannedGuides.map((g) => (
+          <PlannedGuideCard title={g.title} description={g.description} href={g.href} />
+        ))}
+      </div>
+    </section>
+
+    <section class="hub-section">
+      <h2>Related Services</h2>
+      <ul class="related-services">
+        {hub.related.map((r) => (
+          <li>
+            <a href={r.href}>{r.label}</a>
+            <span class="related-note"> — {r.note}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <p class="disclosure-note">{hub.qualification}</p>
+  </div>
+
+  <CtaBand
+    heading="Planning Work on Your Property?"
+    copy="Send the property location, approximate acreage, vegetation conditions, equipment-access details and several wide-angle photos for a project review."
+    primaryLabel="Submit Property Details"
+  />
+</BaseLayout>
+
+<style>
+  .hub-body { max-width: 900px; }
+  .lead-para { font-size: 1.08rem; }
+  .hub-body :global(.resource-feature) { margin-bottom: 1.5rem; }
+  .hub-section { margin-top: 2rem; }
+  .factor-list li { margin-bottom: 0.4rem; }
+  .guides-note { color: var(--text-muted); font-size: 0.92rem; }
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0.9rem;
+  }
+  .related-services { list-style: none; padding: 0; margin: 0; }
+  .related-services li { margin-bottom: 0.55rem; }
+  .related-services a { font-weight: 600; }
+  .related-note { color: var(--text-muted); font-size: 0.92rem; }
+  .hub-body .disclosure-note { margin-top: 2rem; }
+</style>
