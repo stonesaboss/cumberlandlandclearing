@@ -43,7 +43,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/overgrown-acreage.webp",
       "alt": "Overgrown wooded Tennessee acreage before land clearing",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Wooded Tennessee acreage with mixed brush and mature trees before clearing, wide establishing view"
     },
     "sections": [
@@ -150,7 +150,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Land-clearing machine working through wooded acreage",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Tracked land-clearing machine working mixed wooded acreage, per-acre cost factors context"
     },
     "sections": [
@@ -253,7 +253,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/forestry-mulching.webp",
       "alt": "Forestry mulcher grinding brush and saplings into ground-level mulch",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Forestry mulcher grinding brush into mulch in a single pass, cost-comparison context"
     },
     "sections": [
@@ -352,7 +352,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/forestry-mulching.webp",
       "alt": "Forestry mulching equipment working rural wooded property",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Side-by-side context of forestry mulching and traditional clearing on rural property"
     },
     "sections": [
@@ -453,7 +453,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/stump-tree-clearing.webp",
       "alt": "Stump and root removal on cleared rural ground",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Stump being removed from cleared ground, grinding versus full removal context"
     },
     "sections": [
@@ -554,7 +554,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/grading-site-prep.webp",
       "alt": "Excavator removing stumps and roots during grubbing",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Excavator grubbing stumps and roots from cleared ground during site preparation"
     },
     "sections": [
@@ -655,7 +655,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/brush-clearing.webp",
       "alt": "Dense brush and undergrowth being cleared on rural property",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Dense brush and saplings being cleared to reveal usable ground, before-and-during context"
     },
     "sections": [
@@ -754,7 +754,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Rocky wooded ground typical of the Cumberland Plateau",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Rocky wooded ground on the Cumberland Plateau being cleared, surface sandstone visible"
     },
     "sections": [
@@ -854,7 +854,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Rural property being planned and marked for land clearing",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Property owner planning a land-clearing project, marked work area and rural entrance"
     },
     "sections": [
@@ -950,7 +950,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/overgrown-acreage.webp",
       "alt": "Wide view of overgrown rural property for estimate photos",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Wide-angle photos of overgrown property being captured for a land-clearing estimate"
     },
     "sections": [
@@ -1046,7 +1046,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/forestry-mulching.webp",
       "alt": "Land-clearing equipment making progress across acreage",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Forestry mulcher making progress across acreage over a working day, timeline context"
     },
     "sections": [
@@ -1142,7 +1142,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/lot-clearing.webp",
       "alt": "Wooded lot being cleared for a new home site",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Wooded lot being cleared and prepared for a new home site on rural Tennessee land"
     },
     "sections": [
@@ -1242,7 +1242,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/pasture-reclamation.webp",
       "alt": "Overgrown pasture being reclaimed from brush and cedar encroachment",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Brush- and cedar-encroached pasture being reclaimed to open grazing ground"
     },
     "sections": [
@@ -1342,7 +1342,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/trail-access.webp",
       "alt": "Wooded, rolling rural landscape of the Upper Cumberland region",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Rolling wooded rural landscape characteristic of the Upper Cumberland region"
     },
     "sections": [
@@ -1440,7 +1440,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Sloped, rocky terrain on a wooded Tennessee property",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Sloped, rocky wooded terrain being cleared, terrain-cost context, wide view"
     },
     "sections": [
@@ -1533,7 +1533,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Cleared brush and debris being handled on a work site",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Cleared vegetation debris being handled on a land-clearing site, mulch versus piles"
     },
     "sections": [
@@ -1626,7 +1626,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/lot-clearing.webp",
       "alt": "Small wooded lot being cleared with tracked equipment",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Small residential lot being cleared, small-project cost context"
     },
     "sections": [
@@ -1718,7 +1718,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/brush-clearing.webp",
       "alt": "Overgrown brush being cut and mulched on rural property",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Brush cutting compared with forestry mulching on overgrown ground"
     },
     "sections": [
@@ -1811,7 +1811,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/forestry-mulching.webp",
       "alt": "Underbrush cleared beneath preserved mature trees",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Selective clearing of underbrush while mature trees are preserved on a wooded lot"
     },
     "sections": [
@@ -1909,7 +1909,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/forestry-mulching.webp",
       "alt": "Mulch layer and cleared ground after forestry mulching",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Cleared vegetation turned to mulch layer versus stacked debris piles after clearing"
     },
     "sections": [
@@ -2002,7 +2002,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/forestry-mulching.webp",
       "alt": "Forestry mulcher working a sloped, wooded hillside",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Forestry mulcher working a sloped wooded hillside, steep-terrain context"
     },
     "sections": [
@@ -2095,7 +2095,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Tracked equipment navigating a narrow rural access route",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Equipment navigating a narrow rural gate and drive to reach a work area"
     },
     "sections": [
@@ -2189,7 +2189,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Wooded Tennessee property in seasonal clearing conditions",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Wooded property in different seasonal conditions for land clearing, Tennessee"
     },
     "sections": [
@@ -2281,7 +2281,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/grading-site-prep.webp",
       "alt": "Utility marking flags on a property before excavation",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Utility locate flags marking underground lines before ground-disturbing work"
     },
     "sections": [
@@ -2375,7 +2375,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/grading-site-prep.webp",
       "alt": "Cleared site being graded and shaped with equipment",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Cleared ground being graded and shaped for a building site"
     },
     "sections": [
@@ -2468,7 +2468,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/trail-access.webp",
       "alt": "Cleared driveway corridor through wooded rural land",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Driveway corridor being cleared and graded through wooded rural property"
     },
     "sections": [
@@ -2565,7 +2565,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/grading-site-prep.webp",
       "alt": "Cleared rural ground prepared for septic installation",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Cleared area of rural property being prepared for septic system installation"
     },
     "sections": [
@@ -2663,7 +2663,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/fence-line-clearing.webp",
       "alt": "Brush-choked fence line being cleared on rural property",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Overgrown fence line being cleared of brush and encroaching growth on farmland"
     },
     "sections": [
@@ -2760,7 +2760,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/overgrown-acreage.webp",
       "alt": "Overgrown wooded acreage being evaluated before purchase",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Prospective buyer evaluating overgrown wooded acreage in the Upper Cumberland"
     },
     "sections": [
@@ -2857,7 +2857,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Land-clearing equipment staged at a rural property entrance",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Equipment and trailer staging at a rural property entrance before clearing"
     },
     "sections": [
@@ -2951,7 +2951,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/forestry-mulching.webp",
       "alt": "Cleared underbrush beneath retained mature trees",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Underbrush cleared beneath a canopy of retained mature trees on rural property"
     },
     "sections": [
@@ -3048,7 +3048,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Cleared trees and brush being loaded for haul-off",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Cleared material loaded for hauling versus mulched in place, decision context"
     },
     "sections": [
@@ -3142,7 +3142,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/overgrown-acreage.webp",
       "alt": "Property densely overgrown with young saplings",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Field or lot overgrown with dense young saplings being reclaimed by mulching"
     },
     "sections": [
@@ -3238,7 +3238,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Heavy equipment working on soft, wet ground",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Tracked equipment on soft wet ground showing ruts, wet-condition context"
     },
     "sections": [
@@ -3331,7 +3331,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Wooded rural ground drying after heavy rain",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Rural wooded ground drying out after rain before land clearing can resume"
     },
     "sections": [
@@ -3425,7 +3425,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/forestry-mulching.webp",
       "alt": "Mature shade tree preserved amid cleared underbrush",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Underbrush cleared around a protected mature shade tree with its root zone intact"
     },
     "sections": [
@@ -3523,7 +3523,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Rural property being prepared ahead of a clearing crew",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Property owner preparing a rural site before land-clearing crew arrives"
     },
     "sections": [
@@ -3616,7 +3616,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Flagging tape marking a clearing boundary on wooded property",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Flagging tape and stakes marking a work-area boundary and keep-trees"
     },
     "sections": [
@@ -3709,7 +3709,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/overgrown-acreage.webp",
       "alt": "Property boundary marker on rural wooded land",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Surveyor marker and boundary corner on a wooded rural property"
     },
     "sections": [
@@ -3802,7 +3802,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/overgrown-acreage.webp",
       "alt": "Iron corner pin marking a wooded property boundary",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Locating an iron corner pin along a wooded property boundary"
     },
     "sections": [
@@ -3895,7 +3895,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Compiling property details for a land-clearing request",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Property details and photos being compiled for a land-clearing request"
     },
     "sections": [
@@ -3990,7 +3990,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Rural farm gate and entrance prepared for equipment access",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Wide rural gate and entrance prepared for equipment and trailers"
     },
     "sections": [
@@ -4082,7 +4082,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/lot-clearing.webp",
       "alt": "Cleared rural site prepared for an outbuilding",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Cleared and leveled rural site prepared for a barn or workshop building"
     },
     "sections": [
@@ -4174,7 +4174,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/grading-site-prep.webp",
       "alt": "Stumps and roots removed from a building footprint",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Stumps and roots being grubbed out of a building footprint before construction"
     },
     "sections": [
@@ -4271,7 +4271,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/grading-site-prep.webp",
       "alt": "Level, compacted building pad on a cleared site",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Compacted, level building pad prepared on a cleared rural site"
     },
     "sections": [
@@ -4364,7 +4364,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/grading-site-prep.webp",
       "alt": "Graded site shaped to drain water away from a building area",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Graded site shaped for drainage with swales directing water away from a pad"
     },
     "sections": [
@@ -4456,7 +4456,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/grading-site-prep.webp",
       "alt": "Freshly cleared lot ready for the next site-prep steps",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Freshly cleared lot being taken through grubbing and grading toward buildable"
     },
     "sections": [
@@ -4549,7 +4549,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/grading-site-prep.webp",
       "alt": "Erosion control matting on a freshly graded slope",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Erosion control measures like matting and seeding on a cleared sloped site"
     },
     "sections": [
@@ -4642,7 +4642,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/fence-line-clearing.webp",
       "alt": "Cleared corridor along a rural fence line",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Cleared corridor along a farm fence line showing a maintainable buffer width"
     },
     "sections": [
@@ -4734,7 +4734,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/trail-access.webp",
       "alt": "Cleared access trail through wooded property",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Cleared access trail winding through wooded rural property"
     },
     "sections": [
@@ -4827,7 +4827,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/trail-access.webp",
       "alt": "Cleared trail and food-plot edge on hunting property",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Cleared trail and shooting lane on wooded hunting property with a food plot edge"
     },
     "sections": [
@@ -4923,7 +4923,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/pond-site-clearing.webp",
       "alt": "Farm pond with overgrown banks being cleared",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Overgrown farm pond banks being cleared to restore access and open water views"
     },
     "sections": [
@@ -5015,7 +5015,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/pond-site-clearing.webp",
       "alt": "Cleared site prepared for a new pond",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Cleared and prepared rural site staked out for a new pond before excavation"
     },
     "sections": [
@@ -5108,7 +5108,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/trail-access.webp",
       "alt": "Improved access lane into rural back acreage",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Improved cleared access lane opening up back acreage on a rural property"
     },
     "sections": [
@@ -5205,7 +5205,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/pasture-reclamation.webp",
       "alt": "Maintained open ground after forestry mulching",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Mulched ground being maintained with mowing to prevent brush regrowth"
     },
     "sections": [
@@ -5298,7 +5298,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/trail-access.webp",
       "alt": "Overgrown farm road being reopened",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Overgrown abandoned farm road being reopened through brush on rural property"
     },
     "sections": [
@@ -5392,7 +5392,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Wooded and farm ground typical of the Cookeville area",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Mixed wooded and farm ground typical of Putnam County around Cookeville"
     },
     "sections": [
@@ -5484,7 +5484,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Wooded Cumberland Plateau ground with rock outcrops",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Cumberland Plateau wooded ground with sandstone outcrops being cleared near Crossville"
     },
     "sections": [
@@ -5576,7 +5576,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Sloped wooded hillside being cleared",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Sloped wooded hillside in the Upper Cumberland being cleared with tracked equipment"
     },
     "sections": [
@@ -5668,7 +5668,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/pasture-reclamation.webp",
       "alt": "Pasture encroached by eastern red cedar and brush",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Pasture edge being reclaimed from eastern red cedar and brush encroachment"
     },
     "sections": [
@@ -5764,7 +5764,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/grading-site-prep.webp",
       "alt": "Rocky ground during land preparation",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Rocky ground being prepared for construction in the Upper Cumberland"
     },
     "sections": [
@@ -5857,7 +5857,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/land-clearing.webp",
       "alt": "Rural ground showing seasonal moisture conditions",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Upper Cumberland property across wet and dry seasonal ground conditions"
     },
     "sections": [
@@ -5949,7 +5949,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/trail-access.webp",
       "alt": "Rural gravel drive providing equipment access to acreage",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Equipment trailer on a long rural gravel drive reaching Upper Cumberland acreage"
     },
     "sections": [
@@ -6042,7 +6042,7 @@ export const guides: Guide[] = [
       "fallback": "/images/page-features/overgrown-acreage.webp",
       "alt": "Overgrown parcel being evaluated for usable acreage",
       "aspect": "3:2",
-      "status": "pending",
+      "status": "available",
       "subject": "Overgrown Upper Cumberland parcel being evaluated for usable versus total acreage"
     },
     "sections": [
