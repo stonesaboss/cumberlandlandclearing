@@ -268,7 +268,7 @@ export const resourceHubs: ResourceHub[] = [
       { title: 'What Underground Utilities Must Be Marked?', href: '/resources/guides/what-underground-utilities-must-be-marked/', description: "What 811 locates, what it misses, and why private lines are the hidden risk." },
     ],
     related: [
-      { label: 'Request a Project Review', href: '/request-estimate/', note: 'The structured form collects exactly the details contractors need.' },
+      { label: 'Request a Project Review', href: '/request-estimate/', note: 'A quick contact form starts the review — property details are discussed when you’re contacted.' },
       { label: 'Land Clearing in Cookeville', href: '/land-clearing-cookeville-tn/', note: 'What a full clearing project typically includes.' },
       { label: 'Upper Cumberland Service Area', href: '/service-area/', note: 'Confirm the property falls within reviewed coverage.' },
     ],

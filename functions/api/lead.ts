@@ -25,11 +25,19 @@ const MAX_FILES = 6;
 const MAX_FILE_BYTES = 10 * 1024 * 1024;
 const MAX_TOTAL_BYTES = 30 * 1024 * 1024;
 
-/** Required text fields with max lengths. Option lists mirror src/data/form-options.ts. */
-const TEXT_FIELDS: Record<string, number> = {
+/** Required contact fields with max lengths. The form collects only these. */
+const REQUIRED_FIELDS: Record<string, number> = {
   full_name: 120,
   phone: 30,
   email: 200,
+};
+
+/**
+ * Optional property fields, kept for payload-shape compatibility: the lead
+ * webhook/spreadsheet columns still receive these keys (empty when absent),
+ * and any client that does send them gets the same sanitization as before.
+ */
+const OPTIONAL_FIELDS: Record<string, number> = {
   property_location: 250,
   city_or_county: 120,
   acreage: 60,
@@ -126,13 +134,17 @@ export const onRequest: PagesFunction<Env> = async (context) => {
 
   // ── Validate text fields ──
   const fields: Record<string, string> = {};
-  for (const [name, max] of Object.entries(TEXT_FIELDS)) {
+  for (const [name, max] of Object.entries(REQUIRED_FIELDS)) {
     const raw = form.get(name);
     const value = typeof raw === 'string' ? sanitize(raw, max) : '';
     if (!value) {
       return json(422, { ok: false, error: `Missing required field: ${name.replace(/_/g, ' ')}.` });
     }
     fields[name] = value;
+  }
+  for (const [name, max] of Object.entries(OPTIONAL_FIELDS)) {
+    const raw = form.get(name);
+    fields[name] = typeof raw === 'string' ? sanitize(raw, max) : '';
   }
 
   const phone = normalizePhone(fields.phone);
@@ -273,7 +285,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           body: JSON.stringify({
             from: 'leads@cumberlandlandclearing.com',
             to: [env.FORM_RECIPIENT_EMAIL],
-            subject: `New land-clearing lead ${leadId} — ${lead.service_needed} in ${lead.city_or_county}`,
+            subject: `New land-clearing lead ${leadId}${lead.city_or_county ? ` — ${lead.city_or_county}` : ''}`,
             text: [
               `Lead ${leadId} (${createdAt})`,
               `Name: ${lead.full_name}`,

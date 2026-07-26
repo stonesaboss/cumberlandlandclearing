@@ -1,14 +1,5 @@
 ---
-import { SITE, CONSENT_TEXT } from '../config';
-import {
-  SERVICE_OPTIONS,
-  ACREAGE_OPTIONS,
-  CONDITION_OPTIONS,
-  INTENDED_USE_OPTIONS,
-  TERRAIN_OPTIONS,
-  ACCESS_OPTIONS,
-  TIMING_OPTIONS,
-} from '../data/form-options';
+import { CONSENT_TEXT } from '../config';
 
 interface Props {
   /** Unique per page-placement so ids don't collide when the form appears twice. */
@@ -25,22 +16,6 @@ const p = idPrefix;
  * (e.g. local .env with Cloudflare's test key). The secret key is server-only.
  */
 const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAAD0-2TnxP2Vp7Ht6';
-
-const selects: {
-  id: string;
-  name: string;
-  label: string;
-  options: readonly string[];
-  placeholder: string;
-}[] = [
-  { id: 'acreage', name: 'acreage', label: 'Approximate Acreage', options: ACREAGE_OPTIONS, placeholder: 'Select Acreage' },
-  { id: 'service', name: 'service', label: 'Service Needed', options: SERVICE_OPTIONS, placeholder: 'Select a Service' },
-  { id: 'condition', name: 'condition', label: 'Current Property Condition', options: CONDITION_OPTIONS, placeholder: 'Select One' },
-  { id: 'intended_use', name: 'intended_use', label: 'Intended Use After Clearing', options: INTENDED_USE_OPTIONS, placeholder: 'Select One' },
-  { id: 'terrain', name: 'terrain', label: 'Terrain', options: TERRAIN_OPTIONS, placeholder: 'Select One' },
-  { id: 'access', name: 'access', label: 'Equipment Access', options: ACCESS_OPTIONS, placeholder: 'Select One' },
-  { id: 'timing', name: 'timing', label: 'Preferred Project Timing', options: TIMING_OPTIONS, placeholder: 'Select One' },
-];
 ---
 
 <div class="lead-form-wrap" id={`${p}-form-wrap`}>
@@ -49,6 +24,11 @@ const selects: {
   </div>
 
   <form class="lead-form" novalidate>
+    <p class="form-lede">
+      Share your contact details and you'll be contacted to discuss the property, the
+      vegetation and what you want done.
+    </p>
+
     <div class="field">
       <label for={`${p}-name`}>Full Name <span class="req" aria-hidden="true">*</span></label>
       <input id={`${p}-name`} name="full_name" type="text" required autocomplete="name" maxlength="120" />
@@ -67,44 +47,6 @@ const selects: {
       <p class="field-error" id={`${p}-email-err`}>Please enter a valid email address.</p>
     </div>
 
-    <div class="field">
-      <label for={`${p}-location`}>Property Address or Nearest Location <span class="req" aria-hidden="true">*</span></label>
-      <input id={`${p}-location`} name="property_location" type="text" required maxlength="250" placeholder="Address, road name or nearest crossroads" />
-      <p class="field-error" id={`${p}-location-err`}>Please tell us where the property is.</p>
-    </div>
-
-    <div class="field">
-      <label for={`${p}-city`}>City or County <span class="req" aria-hidden="true">*</span></label>
-      <input id={`${p}-city`} name="city_or_county" type="text" required maxlength="120" placeholder="e.g. Cookeville / Putnam County" />
-      <p class="field-error" id={`${p}-city-err`}>Please enter a city or county.</p>
-    </div>
-
-    {selects.map((s) => (
-      <div class="field">
-        <label for={`${p}-${s.id}`}>{s.label} <span class="req" aria-hidden="true">*</span></label>
-        <select id={`${p}-${s.id}`} name={s.name} required>
-          <option value="">— {s.placeholder} —</option>
-          {s.options.map((o) => (
-            <option value={o}>{o}</option>
-          ))}
-        </select>
-        <p class="field-error" id={`${p}-${s.id}-err`}>Please select an option.</p>
-      </div>
-    ))}
-
-    <div class="field">
-      <label for={`${p}-details`}>Additional Details <span class="req" aria-hidden="true">*</span></label>
-      <textarea id={`${p}-details`} name="details" rows="4" required maxlength="4000" placeholder="Anything a contractor should know — gates, utilities, structures, keep-trees, drainage…"></textarea>
-      <p class="field-error" id={`${p}-details-err`}>Please add a short description of the project.</p>
-    </div>
-
-    <div class="field">
-      <label for={`${p}-photos`}>Upload Photos <span class="optional">(optional — JPG, PNG or HEIC, up to 6 files, 10&nbsp;MB each)</span></label>
-      <input id={`${p}-photos`} name="photos" type="file" multiple accept=".jpg,.jpeg,.png,.heic,image/jpeg,image/png,image/heic" />
-      <p class="field-error" id={`${p}-photos-err`}>Please check the file types and sizes (JPG/PNG/HEIC, max 6 files, 10 MB each).</p>
-      <p class="field-hint">Wide views, the entrance, and the densest vegetation help most.</p>
-    </div>
-
     <!-- Honeypot — hidden from real users; bots fill it. -->
     <div class="hp-field" aria-hidden="true">
       <label for={`${p}-website`}>Website</label>
@@ -118,7 +60,7 @@ const selects: {
     <p class="form-error" role="alert" hidden></p>
 
     <button type="submit" class="btn btn-orange btn-lg submit-btn" data-track="form_submit_click">
-      Submit Property Details
+      Request Project Review
     </button>
 
     <p class="consent">{CONSENT_TEXT}</p>
@@ -127,8 +69,8 @@ const selects: {
   <div class="form-success" hidden>
     <h3>Request received</h3>
     <p>
-      Your project details were submitted successfully. If the project can be reviewed, you will be
-      contacted about scope, access and next steps.
+      Your request was submitted successfully. If the project can be reviewed, you will be
+      contacted to discuss the property and next steps.
     </p>
     <p class="lead-ref"></p>
   </div>
@@ -152,8 +94,7 @@ const selects: {
     margin: 0;
   }
   .lead-form { padding: 1.25rem; }
-  .field-hint { font-size: 0.78rem; color: var(--text-muted); margin: 0.25rem 0 0; }
-  .optional { font-weight: 400; font-size: 0.78rem; color: var(--text-muted); }
+  .form-lede { font-size: 0.9rem; color: var(--text-muted); margin: 0 0 1rem; }
   .hp-field { position: absolute; left: -9999px; top: -9999px; height: 1px; overflow: hidden; }
   .turnstile-slot { margin-block: 0.75rem; min-height: 66px; }
   .submit-btn { width: 100%; margin-top: 0.5rem; }
@@ -173,11 +114,6 @@ const selects: {
 </style>
 
 <script>
-  const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/heic', 'image/heif'];
-  const ALLOWED_EXT = /\.(jpe?g|png|heic|heif)$/i;
-  const MAX_FILES = 6;
-  const MAX_FILE_BYTES = 10 * 1024 * 1024;
-
   function trackEvent(event: string, detail: Record<string, string>) {
     // gtag('event', …) for plain GA4; dataLayer push for GTM setups.
     const w = window as unknown as { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
@@ -214,19 +150,12 @@ const selects: {
         started = true;
         trackEvent('form_start', { form_location: form.querySelector<HTMLInputElement>('[name=source_page]')?.value ?? '' });
       }
-      const t = e.target as HTMLInputElement;
-      t.closest('.field')?.classList.remove('invalid');
-      if (t.type === 'file') trackEvent('photo_upload', { files: String(t.files?.length ?? 0) });
+      (e.target as HTMLElement).closest('.field')?.classList.remove('invalid');
     });
-
-    function markInvalid(el: HTMLElement) {
-      el.closest('.field')?.classList.add('invalid');
-    }
 
     function validate(): boolean {
       let firstBad: HTMLElement | null = null;
       form.querySelectorAll('[required]').forEach((node) => {
-        // input, select and textarea all expose .value/.type via this cast
         const el = node as HTMLInputElement;
         let bad = !el.value.trim();
         if (!bad) {
@@ -234,23 +163,10 @@ const selects: {
           if (el.type === 'tel') bad = el.value.replace(/\D/g, '').length < 10;
         }
         if (bad) {
-          markInvalid(el);
+          el.closest('.field')?.classList.add('invalid');
           firstBad ??= el;
         }
       });
-      const files = form.querySelector<HTMLInputElement>('input[type=file]');
-      if (files?.files && files.files.length > 0) {
-        const list = Array.from(files.files);
-        const bad =
-          list.length > MAX_FILES ||
-          list.some(
-            (f) => f.size > MAX_FILE_BYTES || (!ALLOWED_TYPES.includes(f.type) && !ALLOWED_EXT.test(f.name)),
-          );
-        if (bad) {
-          markInvalid(files);
-          firstBad ??= files;
-        }
-      }
       if (firstBad) {
         (firstBad as HTMLElement).focus();
         return false;
@@ -276,9 +192,7 @@ const selects: {
         }
 
         trackEvent('form_complete', {
-          service: String(data.get('service') ?? ''),
-          city_or_county: String(data.get('city_or_county') ?? ''),
-          acreage: String(data.get('acreage') ?? ''),
+          form_location: String(data.get('source_page') ?? ''),
         });
 
         form.hidden = true;
@@ -300,7 +214,7 @@ const selects: {
             : 'Something went wrong submitting the form. Please try again, or call us instead.';
         formError.hidden = false;
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Submit Property Details';
+        submitBtn.textContent = 'Request Project Review';
         // Reset Turnstile so an expired token can be re-issued.
         const w = window as unknown as { turnstile?: { reset: () => void } };
         w.turnstile?.reset?.();
